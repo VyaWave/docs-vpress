@@ -2,9 +2,7 @@
 sidebarDepth: 2
 ---
 
-# 🎉 HTML
-
----
+# 🎉 Hi Algorithm
 
 ```sh
 🎟🤹‍🤹‍🎭🎬🎼🥁🎸🚗🚌🚁✈️🚀⛵️🚤🛥🛳⛴⛽️🚦🚥🚧🚏🗽🗼🏰🎠

@@ -1,16 +1,23 @@
 {
   "name": "fe-wpress",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "repository": "https://github.com/AyAmeng/fe-wpress.git",
   "author": "AyAmeng <372969383@qq.com>",
   "license": "MIT",
   "devDependencies": {
+    "husky": "^1.0.0-rc.13",
     "vuepress": "^0.12.0"
   },
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "deploy": "sh deploy.sh"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "",
+      "pre-push": "yarn deploy"
+    }
   }
 }

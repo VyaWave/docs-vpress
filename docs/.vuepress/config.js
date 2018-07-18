@@ -26,11 +26,20 @@ module.exports = {
     // Side Bar Config
     sidebar: [
       '/',
-      ['/javascript/', 'JS'],
-      ['/html/', 'HTML'],
-      ['/css/', 'CSS'],
-    ]
-    ,
-    displayAllHeaders: true 
+      ['/browser/', '🐿🌨 Hi Browser'],
+      ['/html/', '🐿🌨 Hi HTML'],
+      ['/javascript/', '⛽🌨 Hi JavaScript'],
+      ['/css/', '☀️🌧 Hi CSS'],
+      ['/function/', '🐿🌨 Hi Function'],
+      ['/object/', '☀️🌧 Hi Object'],
+      ['/design-patterns/', '⛈☀️ Hi Design patterns'],
+      ['/algorithm/', '⛽☀️ Hi Algorithm'],
+      ['/interview/', '⛈☀️ Hi Interview'],
+      ['/source/', '⛈🐳 Hi Open Source'],
+      ['/shell/', '⛈🐳 Hi Shell'],
+      ['/emojis/', '⛈☀️ Hi Emojis'],
+    ],
+    // 显示所有页面的标题链接
+    displayAllHeaders: false
   }
 }
