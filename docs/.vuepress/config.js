@@ -1,11 +1,13 @@
 // https://vuepress.vuejs.org/zh/config/
+// https://vuepress.vuejs.org/zh/default-theme-config/
 
-// Docs Config
 module.exports = {
 
   // Basic Config
-  title: '🐯前端指南',
+  title: '🐯☀️前端指南',
+
   description: 'Just Build My FE Knowledge',
+
   // # 大小写敏感
   base: '/magic-wpress/', 
   head: [
@@ -14,6 +16,7 @@ module.exports = {
   
   // Theme Config
   themeConfig: {
+
     // Nav Bar Config
     nav: [
       { text: 'Home', link: '/' },
@@ -23,9 +26,11 @@ module.exports = {
     // Side Bar Config
     sidebar: [
       '/',
-    ],
-
-    // Show All Links Default: false
+      ['/javascript/', 'JS'],
+      ['/html/', 'HTML'],
+      ['/css/', 'CSS'],
+    ]
+    ,
     displayAllHeaders: true 
   }
 }
