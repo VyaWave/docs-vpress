@@ -1,0 +1,16 @@
+{
+  "name": "fe-wpress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/AyAmeng/fe-wpress.git",
+  "author": "AyAmeng <372969383@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^0.12.0"
+  },
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "sh deploy.sh"
+  }
+}
