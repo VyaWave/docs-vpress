@@ -44,7 +44,7 @@ sidebarDepth: 2
 
   6. [shell-主题](https://github.com/fcamblor/oh-my-zsh-agnoster-fcamblor.git) `shell 主题`
 
-  7. []( https://github.com/zsh-users/zsh-autosuggestions) ⛳️🥊 `shell 自动补全`
+  7. [zsh-autosuggestions]( https://github.com/zsh-users/zsh-autosuggestions) ⛳️🥊 `shell 自动补全`
 
 ## Git
 
