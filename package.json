@@ -1,8 +1,8 @@
 {
-  "name": "fe-wpress",
+  "name": "magic-wpress",
   "version": "0.0.1",
   "main": "index.js",
-  "repository": "https://github.com/AyAmeng/fe-wpress.git",
+  "repository": "https://github.com/AyAmeng/magic-wpress.git",
   "author": "AyAmeng <372969383@qq.com>",
   "license": "MIT",
   "devDependencies": {
