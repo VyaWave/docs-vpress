@@ -37,6 +37,7 @@ module.exports = {
       ['/interview/', '⛈☀️ Hi Interview'],
       ['/source/', '⛈🐳 Hi Open Source'],
       ['/shell/', '⛈🐳 Hi Shell'],
+      ['/node/', '⛈🐳 Hi Node'],
       ['/emojis/', '⛈☀️ Hi Emojis'],
       ['/license/', '⛈☀️ License'],
     ],
