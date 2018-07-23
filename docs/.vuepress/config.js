@@ -38,6 +38,7 @@ module.exports = {
       ['/source/', '⛈🐳 Hi Open Source'],
       ['/shell/', '⛈🐳 Hi Shell'],
       ['/emojis/', '⛈☀️ Hi Emojis'],
+      ['/license/', '⛈☀️ License'],
     ],
     // 显示所有页面的标题链接
     displayAllHeaders: false
