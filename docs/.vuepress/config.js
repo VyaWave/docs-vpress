@@ -20,7 +20,7 @@ module.exports = {
     // Nav Bar Config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Star Me', link: 'https://github.com/ayameng' },
+      { text: '⭐️ Star Me', link: 'https://github.com/ayameng' },
     ],
 
     // Side Bar Config

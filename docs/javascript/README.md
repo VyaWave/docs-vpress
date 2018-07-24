@@ -75,20 +75,20 @@ sidebarDepth: 2
 
 ### 1.5 变量装换表
 
-        |   Value   | Boolean |  Number  | String            |
-        | :-------: | :-----: | :------: | ----------------- |
-        | undefined |  false  |   NaN    | "undefined"       |
-        |   null    |  false  |    0     | "null"            |
-        |   true    |  true   |    1     | "true"            |
-        |   false   |  false  |    0     | "false"           |
-        |    ""     |  false  |    0     | ''                |
-        |   '123'   |  true   |   123    | '123'             |
-        |   '1a'    |  true   |   NaN    | '1a'              |
-        |     0     |  false  |    0     | "0"               |
-        |     1     |  true   |    1     | "1"               |
-        | Infinity  |  true   | Infinity | "Infinity"        |
-        |    NaN    |  false  |   NaN    | 'NaN'             |
-        |    {}     |  true   |   NaN    | "[object Object]" |
+|   Value   | Boolean |  Number  | String            |
+| :-------: | :-----: | :------: | ----------------- |
+| undefined |  false  |   NaN    | "undefined"       |
+|   null    |  false  |    0     | "null"            |
+|   true    |  true   |    1     | "true"            |
+|   false   |  false  |    0     | "false"           |
+|    ""     |  false  |    0     | ''                |
+|   '123'   |  true   |   123    | '123'             |
+|   '1a'    |  true   |   NaN    | '1a'              |
+|     0     |  false  |    0     | "0"               |
+|     1     |  true   |    1     | "1"               |
+| Infinity  |  true   | Infinity | "Infinity"        |
+|    NaN    |  false  |   NaN    | 'NaN'             |
+|    {}     |  true   |   NaN    | "[object Object]" |
 
 ### 1.6 🐯 区分数据类型
 
