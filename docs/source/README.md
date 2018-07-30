@@ -28,18 +28,21 @@ sidebarDepth: 2
 
 ## 1. React
 
-  1. all platforms
-
 - [proton-native](https://proton-native.js.org/#/) ⛳️🥊 `开发桌面应用 跨平台` ⭐️ `7.7k`
 
 ## 2. Vue
 
-  1. Charts
+- [vue-Press](https://vuepress.vuejs.org/zh/) ⛳️🥊 `VuePree 基于Vue 快速生成技术文档等静态站点的repo🎖🎖🎖`
+
 - [laue](https://laue.js.org/examples) ⛳️🥊 `轻量级组件化 SVG 图表库` ⭐️ `40`
 
 ## Git
 
 - [hooks/husky](https://github.com/typicode/husky) ⛳ ️🥊 `Make Git Hooks So Easy` ⭐️ `8.5k`
+
+- [iView](https://www.iviewui.com/)⛳️🥊 `iView Ui` ⭐️ `1.6k`
+
+- [iView Editor](http://editor.iviewui.com/)⛳️🥊 `iView Editor 实时进行编辑iView组件和实时预览`
 
 ## 3. Shell
 
@@ -53,12 +56,18 @@ sidebarDepth: 2
 
   5. [shell-配色方案](https://github.com/altercation/solarized) ⛳️🥊 `shell 配色`
 
-  6. [shell-主题](https://github.com/fcamblor/oh-my-zsh-agnoster-fcamblor.git) `shell 主题`
+  6. [shell-主题](https://github.com/fcamblor/oh-my-zsh-agnoster-fcamblor.git) ⛳️🥊 `shell 主题`
 
   7. [zsh-autosuggestions]( https://github.com/zsh-users/zsh-autosuggestions) ⛳️🥊 `shell 自动补全`
+
+- [Terminalizer capture Pic For Terminal](https://github.com/faressoft/terminalizer) ⛳️🥊 `在终端进行录制生成gif图`
 
 ## 4. Git
 
  1. [husky@next](https://github.com/typicode/husky) ⛳️🥊 `Git Hooks Easy`
+
+## 5. Wechat App
+
+- [iview weapp](https://weapp.iviewui.com/docs/guide/start) ⛳ ️🥊 `iView 的 小程序 Ui`
 
 🚀🚀🚀
