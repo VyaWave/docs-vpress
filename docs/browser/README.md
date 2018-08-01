@@ -1299,13 +1299,17 @@ var globalPerson = createPerson("Nicholas");
 globalPerson = null;
 ```
 
-由于局部变量 localPerson 在 createPerson() 函数执行完毕后就离开了其执行环境，因此无需我们显式地去为它解除引用。但是对于全局变量 globalPerson 而言，则需要我们在不使用它的时候手工为它解除引用，这也正是上面例子中最后一行代码的目的。
+由于局部变量 localPerson 在 createPerson() 函数执行完毕后就离开了其执行环境，
+因此无需我们显式地去为它解除引用。但是对于全局变量 globalPerson 而言，则需要我们在不使用它的时候手工为它解除引用，
+这也正是上面例子中最后一行代码的目的。
 
 不过，解除一个值的引用并不意味着自动回收该值所占用的内存。解除引用的真正作用是让值脱离执行环境，以便垃圾收集器下次运行时将其回收。
 
 #### 8.4 垃圾回收的优化策略
 
-和其他语言一样，JavaScript 的垃圾回收策略也无法避免一个问题：`垃圾回收时，会停止响应其他操作`，这是为了安全考虑。而 JavaScript 的垃圾回收在 `100ms` 甚至以上，对一般的应用还好，但对于 JavaScript 游戏和动画，这种对连贯性要求比较高的应用，就麻烦了。这就是新引擎需要优化的点：`避免垃圾回收造成的长时间停止响应`。
+和其他语言一样，JavaScript 的垃圾回收策略也无法避免一个问题：`垃圾回收时，会停止响应其他操作`，
+这是为了安全考虑。而 JavaScript 的垃圾回收在 `100ms` 甚至以上，对一般的应用还好，但对于 JavaScript 游戏和动画，
+这种对连贯性要求比较高的应用，就麻烦了。这就是新引擎需要优化的点：`避免垃圾回收造成的长时间停止响应`。
 
 David 大叔主要介绍了2个优化方案，而这也是最主要的2个优化方案了：
 
@@ -1313,11 +1317,13 @@ David 大叔主要介绍了2个优化方案，而这也是最主要的2个优化
 
 ![Alt text](../../assets/browser/30.jpg)
 
-这个和 Java 回收策略思想是一致的。目的是通过区分`「临时」与「持久」对象`；多回收「临时对象区」（young generation），少回收「持久对象区」（tenured generation），减少每次需遍历的对象，从而减少每次GC的耗时。Chrome 浏览器所使用的 V8 引擎就是采用的分代回收策略。如图：
+这个和 Java 回收策略思想是一致的。目的是通过区分`「临时」与「持久」对象`；多回收「临时对象区」（young generation），
+少回收「持久对象区」（tenured generation），减少每次需遍历的对象，从而减少每次GC的耗时。Chrome 浏览器所使用的 V8 引擎就是采用的分代回收策略。如图：
 
 #### 8.4.2 增量回收（Incremental GC）
 
-这个方案的思想很简单，就是「每次处理一点，下次再处理一点，如此类推」。这种方案，虽然耗时短，但中断较多，带来了上下文切换频繁的问题。Firefox 浏览器所使用的 JavaScript 引擎就是采用的增量回收策略。如图：
+这个方案的思想很简单，就是「每次处理一点，下次再处理一点，如此类推」。这种方案，虽然耗时短，但中断较多，带来了上下文切换频繁的问题。
+Firefox 浏览器所使用的 JavaScript 引擎就是采用的增量回收策略。如图：
 
 ![Alt text](../../assets/browser/31.jpg)
 
@@ -1336,4 +1342,530 @@ David 大叔主要介绍了2个优化方案，而这也是最主要的2个优化
 
 ![Alt text](../../assets/browser/33.jpg)
 
-- END
+## 9. DOM API
+
+![Alt text](../../assets/browser/15.png)
+
+![Alt text](../../assets/browser/38.png)
+
+### 9.1 DOM1
+
+1. 元素节点：
+
+```ts
+元素节点element: 更精确的获得元素的标签名(全大写)
+属性节点attribute: 属性名
+文本节点text: #text
+注释节点document：#document
+```
+
+2. nodeType: 描述节点对象的类型，值是一个数字﻿
+
+```ts
+element_NODE: 1
+attribute_NODE: 2
+text_NODE: 3
+document_NODE: 9
+假设我们要判断一个Node是不是元素，我们可以这样判断
+
+if(someNode.nodeType == 1){
+    console.log("Node is a element");
+}
+```
+
+- Text类型
+
+Text表示文本节点，它包含的是纯文本内容，不能包含html代码，但可以包含转义后的html代码。Text有下面的特性：
+
+```ts
+nodeType为3
+（2）nodeName为#text
+（3）nodeValue为文本内容
+（4）parentNode是一个Element
+（5）没有子节点
+```
+
+- 2.2 DocumentFragment类型
+
+```ts
+DocumentFragment是所有节点中唯一一个没有对应标记的类型，
+它表示一种轻量级的文档，可能当作一个临时的仓库用来保存可能会添加到文档中的节点。
+DocumentFragment有下面的特性：
+（1）nodeType为11
+（2）nodeName为#document-fragment
+（3）nodeValue为null
+（4）parentNode为null
+```
+
+3. 获取节点名称:
+
+```ts
+el.nodeName = [some]
+```
+
+4. 节点的值:
+
+```ts
+el.nodeValue﻿ = [some]
+```
+
+5.1 父子关系: parserFloat
+
+```ts
+el.parentNode（父节点)
+el.childNodes(所有子节点)
+el.firstChild（第一子元素）
+el.lastChild（最后一子元素）
+```
+
+5.2 兄弟关系:
+
+```ts
+el.previousSibling（上一个兄弟）
+el.nextSibling（下一个兄弟）
+```
+
+5.3 元素树父子关系:
+
+```ts
+parentElementNode （父节点）
+firstElementChild（第一子元素）
+lastElementChild（最后一子元素）
+```
+
+5.4 兄弟关系:
+
+```ts
+previousElementSibling（上一个兄弟）
+nextElementSibling （下一个兄弟）
+```
+
+6. 开始标签到结束标签之间的一切html原文：
+
+```ts
+    el.innerHTML =  [SOMETHING] // string or template or more 
+```
+
+7. 获取所有属性的集合:
+
+```ts
+el.attributes﻿ = [ArrayLike]
+```
+
+8. 获得指定属性的值：
+
+```ts
+el.getAttribute("属性名")﻿
+```
+
+9. 设置指定属性的值：
+
+```ts
+el.setAttribute("属性名","属性值")
+```
+
+10 . 移除属性：
+
+```ts
+el.removeAttribute("属性名")﻿
+```
+
+11. 获取焦点
+
+```ts
+el.onfocus="cb"﻿
+```
+
+12. 失去焦点
+
+```ts
+el.onblur="cb"
+```
+
+13. HTML创建元素: 3步:
+
+`Step1. 创建空元素对象:`
+
+```ts
+var elem = document.createElement("标签名")
+相当于: <标签名>
+使用createElement要注意：通过createElement创建的元素并不属于html文档，
+它只是创建出来，并未添加到html文档中，要调用appendChild或insertBefore等方法将其添加到HTML文档树中。
+```
+
+`Step2. ⚠️ 为空元素添加关键属性`
+
+```ts
+elem.属性名="值"
+elem.innerHTML="内容"
+相当于: <标签名 属性名="值">内容
+```
+
+`Step3. 将新元素挂到DOM树中指定父元素下`
+
+```ts
+追加: parent.appendChild(elem)
+插入: parent.insertBefore(elem,现有元素)
+替换: parent.replaceChild(elem,现有元素)
+删除: parent.removeChild(elem)
+```
+
+14. 🐯查找所有符合条件
+
+```ts
+var elems=document.querySelectorAll("以CSS的命名方式");﻿
+```
+
+15. 🐯只查找一个符合条件的元素:
+
+```ts
+var el=docuemnt.querySelector("以CSS的命名方式");﻿
+必须。指定一个或多个匹配元素的 CSS 选择器。 可以使用它们的 id, 类, 类型, 属性, 属性值等来选取元素。 
+对于多个选择器，使用逗号隔开，返回一个匹配的元素。
+```
+
+16. 脱掉衣服 [ 去除class ]
+
+```ts
+txt.className="";﻿
+```
+
+17. 创建Option:
+
+```ts
+sel.add(new Option(innerHTML,value))﻿
+```
+
+18. Table:﻿
+
+```ts
+创建: createTHead/TBody/TFoot
+删除: deleteTHead/TFoot
+获取: .tHead/tFoot.tBodies[i]
+添加: .insertRow/Cell(i)
+删除: .deleteRow/Cell(i)
+```
+
+19. Form:
+
+```ts
+获取：var form=document.form[i/id/name];
+获得表单元素：form.elements[i/id/name]
+当提交前触发：onsubmit;
+```
+
+20. createTextNode用来创建一个文本节点，用法如下：
+
+```ts
+var textNode = document.createTextNode("一个TextNode");
+同样需要appendChild将其添加到HTML文档树中
+```
+
+21. cloneNode⚠️🐯
+
+cloneNode是用来返回调用方法的节点的一个副本，⚠️它接收一个bool参数，用来表示是否复制子元素，使用如下：
+
+```ts
+var parent = document.getElementById("parentElement"); 
+var parent2 = parent.cloneNode(true);// 传入true
+parent2.id = "parent2";
+```
+
+>⚠️⚠️⚠️ 这段代码很简单，主要是绑定button事件，事件内容是复制了一个parent，修改其id，然后添加到文档中。
+这里有几点要注意：
+
+（1）和createElement一样，cloneNode创建的节点只是游离有html文档外的节点，
+要调用appendChild方法才能添加到文档树中
+（2）如果复制的元素有id，则其副本同样会包含该id，由于id具有唯一性，所以在复制节点后必须要修改其id
+（3）调用接收的bool参数最好传入，如果不传入该参数，不同浏览器对其默认值的处理可能不同
+
+除此之外，我们还有一个需要注意的点：
+如果被复制的节点绑定了事件，则副本也会跟着绑定该事件吗？这里要分情况讨论：
+
+（1）如果是通过addEventListener或者比如onclick进行绑定事件，则副本节点不会绑定该事件
+（2）如果是内联方式绑定比如
+
+```ts
+<div onclick="showParent()"></div>
+```
+
+这样的话，副本节点同样会触发事件。
+
+22. 🐯🐯🐯 createDocumentFragment
+
+createDocumentFragment方法用来创建一个DocumentFragment。
+在前面我们说到DocumentFragment表示一种轻量级的文档，
+它的作用主要是存储临时的节点用来准备添加到文档中。
+createDocumentFragment方法主要是用于添加大量节点到文档中时会使用到。
+假设要循环一组数据，然后创建多个节点添加到文档中，比如示例
+
+```ts
+<ul id="list"></ul>
+<input type="button" value="添加多项" id="btnAdd" />
+
+⚠️document.getElementById("btnAdd").onclick = function(){
+    var list = document.getElementById("list");
+    for(var i = 0;i < 100; i++){
+        var li = document.createElement("li");
+        li.textContent = i;
+        list.appendChild(li);
+    }
+}
+```
+
+这段代码将按钮绑定了一个事件，这个事件创建了100个li节点，然后依次将其添加HTML文档中。
+这样做有一个缺点：
+每次一创建一个新的元素，然后添加到文档树中，⚠️这个过程会造成浏览器的回流。
+所谓回流简单说就是指元素大小和位置会被重新计算，
+如果添加的元素太多，会造成性能问题。这个时候，就是使用createDocumentFragment了。
+DocumentFragment不是文档树的一部分，它是保存在内存中的，所以不会造成回流问题。我们修改上面的代码如下：
+
+```ts
+🎉
+document.getElementById("btnAdd").onclick = function(){
+    var list = document.getElementById("list");
+    var fragment = document.createDocumentFragment();
+
+    for(var i = 0;i < 100; i++){
+        var li = document.createElement("li");
+        li.textContent = i;
+        fragment.appendChild(li);
+    }
+
+    list.appendChild(fragment);
+}
+```
+
+优化后的代码主要是创建了一个fragment，每次生成的li节点先添加到fragment，
+最后一次性添加到list，大家可以看示例xxxxxxxxxx
+
+23. 创建型API总结 🐯🙃🏃🎉⚠️
+
+创建型api主要包括createElement，createTextNode，
+cloneNode和createDocumentFragment四个方法，需要注意下面几点：
+（1）它们创建的节点只是一个孤立的节点，要通过appendChild添加到文档中
+（2）cloneNode要注意如果被复制的节点是否包含子节点以及事件绑定等问题
+（3）使用createDocumentFragment来解决添加大量节点时的性能问题
+
+### 9.2 DOM 2
+
+
+1. 页面修改型API `[⚠️parent]修改页面内容的api主要包括：appendChild，insertBefore，removeChild，replaceChild。`
+
+修改页面内容的api主要包括：appendChild，insertBefore，removeChild，replaceChild。
+
+页面修改型api主要是这四个接口，要注意几个特点：
+
+（1）不管是新增还是替换节点，如果新增或替换的节点是原本存在页面上的，
+则其原来位置的节点将被移除，也就是说同一个节点不能存在于页面的多个位置
+
+（2）节点本身绑定的事件会不会消失，会一直保留着。⚠️⚠️⚠️
+
+2. 🎉appendChild⚠️
+
+appendChild我们在前面已经用到多次，就是将指定的节点添加到调用该方法的节点的子元素的末尾。
+调用方法如下： parent.appendChild(child);
+
+3. 🎉insertBefore⚠️
+
+insertBefore用来添加一个节点到一个参照节点之前，用法如下：
+parentNode.insertBefore(newNode,refNode);
+这段代码创建了一个新节点，然后添加到child节点之前。
+和appendChild一样，如果插入的节点是页面上的节点，则会移动该节点到指定位置，并且保留其绑定的事件。
+
+关于第二个参数参照节点还有几个注意的地方：
+（1）refNode是必传的，如果不传该参数会报错
+（2）如果refNode是undefined或null，则insertBefore会将节点添加到子元素的末尾
+
+3. 🎉removeChild
+
+removeChild顾名思义，就是删除指定的子节点并返回⚠️，用法如下：
+
+var deletedChild = parent.removeChild(node);
+deletedChild指向被删除节点的引用，它等于node，被删除的节点仍然存在于内存中，可以对其进行下一步操作。
+注意：如果被删除的节点不是其子节点，则程序将会报错。我们可以通过下面的方式来确保可以删除：
+通过节点自己获取节点的父节点，然后将自身删除。
+if(node.parentNode){
+    node.parentNode.removeChild(node);
+}
+
+4. 🎉replaceChild
+
+replaceChild用于使用一个节点替换另一个节点，用法如下
+
+parent.replaceChild(newChild,oldChild);
+newChild是替换的节点，可以是新的节点，也可以是页面上的节点，如果是页面上的节点，则其将被转移到新的位置
+oldChild是被替换的节点
+
+### 9.3 DOM 3
+
+`节点查询型API也是非常常用的api，下面我们分别说明一下每一个api的使用`
+
+1. 🏃 document.getElementById
+
+这个接口很简单，根据元素id返回元素，返回值是Element类型，如果不存在该元素，则返回null。
+使用这个接口有几点要注意：
+（1）元素的Id是大小写敏感的，一定要写对元素的id
+（2）HTML文档中可能存在多个id相同的元素，则返回第一个元素
+（3）只从文档中进行搜索元素，如果创建了一个元素并指定id，但并没有添加到文档中，
+则这个元素是不会被查找到的⚠️
+
+2. 🏃  document.getElementsByTagName ⚠️`HTMLCollcetion`
+
+这个接口根据元素标签名获取元素，返回一个即时的HTMLCollection类型，
+什么是即时的HTMLCollection类型呢？
+前面提到⚠️`HTMLCollcetion`元素是即时的表示该集合是随时变化的，
+也就是是文档中有几个div，它会随时进行变化，当我们新增一个div后，
+再访问HTMLCollection时，就会包含这个新增的div。
+使用document.getElementsByTagName这个方法有几点要注意：
+（1）如果要对HTMLCollection集合进行循环操作，最好将其长度缓存起来，
+因为每次循环都会去计算长度，暂时缓存起来可以提高效率⚠️
+（2）如果没有存在指定的标签，该接口返回的不是null，而是一个空的HTMLCollection
+（3）“*”表示所有标签⚠️
+
+3. 🏃document.getElementsByName
+
+getElementsByName主要是通过指定的name属性来获取元素，它返回一个即时的NodeList对象。
+使用这个接口主要要注意几点：
+（1）返回对象是一个即时的NodeList，它是随时变化的
+（2）在HTML元素中，并不是所有元素都有name属性，
+比如div是没有name属性的，但是如果强制设置div的name属性，
+它也是可以被查找到的
+（3）在IE中，如果id设置成某个值，然后传入getElementsByName的参数值和id值一样，
+则这个元素是会被找到的，所以最好不好设置同样的值给id和name
+
+4. 🏃 document.getElementsByClassName
+
+```ts
+这个API是根据元素的class返回一个即时的HTMLCollection，`用法如下`
+```
+
+```ts
+var elements = document.getElementsByClassName(names);
+```
+
+这个接口有下面几点要注意：
+（1）返回结果是一个即时的HTMLCollection，会随时根据文档结构变化
+（2）IE9以下浏览器不支持
+（3）如果要获取2个以上 classname，可传入多个 classname，每个用空格相隔，例如⚠️
+
+```ts
+var elements = document.getElementsByClassName("test1 test2");
+```
+
+5. 🏃  document.querySelector和document.querySelectorAll
+
+
+这两个api很相似，通过css选择器来查找元素，注意选择器要符合CSS选择器的规则。
+
+> 首先来介绍一下document.querySelector。
+document.querySelector返回第一个匹配的元素，如果没有匹配的元素，则返回null。
+注意，由于返回的是第一个匹配的元素，这个api使用的深度优先搜索来获取元素。我们来看这个例子：这个例子很简单，就是两个class都包含“test”的元素，
+一个在文档树的前面，但是它在第三级，另一个在文档树的后面，但它在第一级，通过querySelector获取元素时⚠️⚠️，它通过深度优先搜索，拿到文档树前面的第三级的元素。
+>document.querySelectorAll
+
+document.querySelectorAll的不同之处在于它返回的是所有匹配的元素，而且可以匹配多个选择符，我们来看看下面这个例子这段代码通过querySelectorAll，
+使用id选择器和class选择器选择了两个元素，并依次输出其内容。要注意两点：
+（1）querySelectorAll也是通过深度优先搜索，搜索的元素顺序和选择器的顺序无关
+（2）返回的是一个非即时的NodeList，也就是说结果不会随着文档树的变化而变化 ⚠️⚠️⚠️
+
+兼容性问题：querySelector和querySelectorAll在ie8以下的浏览器不支持。
+
+### 9.4 DOM 节点型查询
+
+`在html文档中的每个节点之间的关系都可以看成是家谱关系，包含父子关系，兄弟关系等等，下面我们依次来看看每一种关系。`
+
+1. 父关系型api  `parentNode || parentElement(Parent IS element)`
+
+```ts
+parentNode：每个节点都有一个parentNode属性，它表示元素的父节点。Element的父节点可能是Element，Document或DocumentFragment。
+
+parentElement：返回元素的父元素节点，与parentNode的区别在于，⚠️其父节点必须是一个Element，如果不是，则返回null
+```
+
+2. 兄弟关系型api `previousSibling || nextSibling`
+
+```ts
+previousSibling：节点的前一个节点，如果该节点是第一个节点，则为null。注意有可能拿到的节点是文本节点或注释节点，与预期的不符，要进行处理一下。
+previousElementSibling：返回前一个元素节点，前一个节点必须是Element，注意IE9以下浏览器不支持。
+
+nextSibling：节点的后一个节点，如果该节点是最后一个节点，则为null。注意有可能拿到的节点是文本节点，与预期的不符，要进行处理一下。
+nextElementSibling：返回后一个元素节点，后一个节点必须是Element，注意IE9以下浏览器不支持。
+```
+
+3. 子关系型api:  `NodeList :  childNodes || children  || firstNode || lastNode hasChildNodes`
+
+```ts
+⚠️⚠️⚠️childNodes：返回一个即时的NodeList⚠️，表示元素的子节点列表，子节点可能会包含文本节点，注释节点等。
+⚠️⚠️⚠️children：一个即时的HTMLCollection，子节点都是Element，IE9以下浏览器不支持。
+firstNode：第一个子节点
+lastNode：最后一个子节点
+hasChildNodes方法：可以用来判断是否包含子节点。
+```
+
+### 9.5 DOM 节点属性
+
+1. setAttribute `element.setAttribute(name, value);`
+
+```ts
+setAttribute：根据名称和值修改元素的特性，用法如下。
+element.setAttribute(name, value);
+其中name是特性名，value是特性值。如果元素不包含该特性，则会创建该特性并赋值。
+如果元素本身包含指定的特性名为属性，则可以世界访问属性进行赋值，比如下面两条代码是等价的：
+element.setAttribute("id","test"); 
+element.id = "test";
+```
+
+2. getAttribute `getAttribute返回指定的特性名相应的特性值，如果不存在，则返回null或空字符串`
+
+```ts
+var value = element.getAttribute("id");
+```
+
+### 9.6 DOM 节点样式
+
+1. window.getComputedStyle
+
+```ts
+window.getComputedStyle是用来获取应用到元素后的样式，假设某个元素并未设置高度而是通过其内容将其高度撑开，
+这时候要获取它的高度就要用到getComputedStyle，用法如下：
+
+var style = window.getComputedStyle(element[, pseudoElt]);
+element是要获取的元素，pseudoElt指定一个伪元素进行匹配。
+返回的style是一个CSSStyleDeclaration对象。
+通过style可以访问到元素计算后的样式
+```
+
+2. getBoundingClientRect `用来返回元素的大小以及相对于浏览器可视窗口的位置`
+
+```ts
+var clientRect = element.getBoundingClientRect();
+clientRect是一个DOMRect对象，包含left，top，right，bottom，它是相对于可视窗口的距离，滚动位置发生改变时，
+它们的值是会发生变化的。除了IE9以下浏览器，还包含元素的height和width等数据，具体可查看链接
+```
+
+### 9.7 DOM className Api `classList的本质-DOMTokenList`
+
+```ts
+el.classList = [DOMTokenList]
+document.body.classList
+
+length 属性，表示元素类名的个数，只读 # document.body.classList.length
+item() 支持一个参数，为类名的索引，返回对应的类名 # document.body.classList.item(0)
+如果索引超出范围, 返回null
+
+add() 支持一个类名字符串参数。表示往类名列表中新增一个类名；如果之前类名存在，则添加忽略。例如：// document.body.classList.add('name')
+
+
+remove() 支持一个类名字符串参数。表示往类名列表中移除该类名。
+// document.body.classList.remove('name')
+
+toggle() 支持一个类名字符串参数。无则加勉，有则移除之意。若类名列表中有此类名，移除之，并返回false; 如果没有，则添加该类名，并返回true.
+ # document.body.classList.toggle('name') // true or false
+
+contains() 支持一个类名字符串参数,表示往类名列表中是否包含该类名
+document.body.classList.contains('name') // true or false 
+
+```
+
+## 10. Event 事件
