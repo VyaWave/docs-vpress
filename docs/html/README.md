@@ -2,7 +2,7 @@
 sidebarDepth: 2
 ---
 
-# 🎉 HTML
+# HTML
 
 ![1](../../assets/html/5.jpg)
 

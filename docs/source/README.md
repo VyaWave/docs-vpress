@@ -2,7 +2,7 @@
 sidebarDepth: 2
 ---
 
-# 🎉🐳 Hi Big World On Github
+# Hi Big World On Github
 
 ![Alt text](../../assets/github/1.jpeg)
 
@@ -69,5 +69,13 @@ sidebarDepth: 2
 ## 5. Wechat App
 
 - [iview weapp](https://weapp.iviewui.com/docs/guide/start) ⛳ ️🥊 `iView 的 小程序 Ui`
+
+## 5. Alfred神器
+
+- [Alfred intro](http://louiszhai.github.io/2018/05/31/alfred/) ⛳ ️🥊 `科普使用`
+
+- [Alfred Site](https://www.alfredapp.com/) ⛳ ️🥊 `workflow Website`
+
+- [Alfred Workflow](http://alfredworkflow.com/) ⛳ ️🥊 `workflow list`
 
 🚀🚀🚀

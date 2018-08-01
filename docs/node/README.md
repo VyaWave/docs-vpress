@@ -2,7 +2,7 @@
 sidebarDepth: 2
 ---
 
-# 🎉 NodeJS
+# NodeJS
 
 ```sh
 🎟🤹‍🤹‍🎭🎬🎼🥁🎸🚗🚌🚁✈️🚀⛵️🚤🛥🛳⛴⛽️🚦🚥🚧🚏🗽🗼🏰🎠

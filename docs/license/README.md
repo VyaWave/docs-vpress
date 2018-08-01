@@ -2,7 +2,7 @@
 sidebarDepth: false
 ---
 
-# 🎉License
+# License
 
 > ~ 让我们荡起双桨，小船荡起波浪🌊~
 

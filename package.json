@@ -13,7 +13,7 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "deploy": "sh deploy.sh"
+    "deploy": "/bin/bash ./deploy.sh"
   },
   "husky": {
     "hooks": {

@@ -2,7 +2,7 @@
 sidebarDepth: 2
 ---
 
-# 🎉 Hello Shell
+# Hello Shell
 
 ---
 
@@ -36,11 +36,7 @@ plugins=(
   zsh-autosuggestions,
   zsh-syntax-highlighting
 )
-```
 
-- extra
-
-```shell
 # ~/.zshrc
 # 加载shell_alias别名文件
 test -f ~/.shell_alias && source ~/.shell_alias

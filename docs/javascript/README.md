@@ -1,7 +1,7 @@
 ---
 sidebarDepth: 2
 ---
-# 🎉 JavaScript
+# JavaScript
 
 ---
 
