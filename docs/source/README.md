@@ -66,6 +66,8 @@ sidebarDepth: 2
 
  1. [husky@next](https://github.com/typicode/husky) ⛳️🥊 `Git Hooks Easy`
 
+- [commits/commitizen](https://github.com/commitizen/cz-cli) ⛳ ️🥊 `Make Commit Message Into Graceful Standard 规范格式化的 message 信息` ⭐️ `3.7k`
+
 ## 5. Wechat App
 
 - [iview weapp](https://weapp.iviewui.com/docs/guide/start) ⛳ ️🥊 `iView 的 小程序 Ui`
