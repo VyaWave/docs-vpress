@@ -2,8 +2,8 @@
 <template>
   <p>
     <a><img src="https://img.shields.io/badge/make%20progress-happen-%234fb898.svg"></a>
-    <a><img src="https://img.shields.io/badge/develop%20with-VuePreess-brightgreen.svg"></a>
-    <a><img src="https://img.shields.io/badge/status-coding-brightgreen.svg"></a>
+    <a><img src="https://img.shields.io/badge/develop%20with-VuePreess-%234fb898.svg"></a>
+    <a><img src="https://img.shields.io/badge/status-coding-%234fb898.svg"></a>
     <a><img :src="version"></a>
   </p>
 </template>
@@ -17,7 +17,7 @@ export default {
   computed: {
     version() {
       // dynamic version
-      return `https://img.shields.io/badge/version-${packageJson.version}-brightgreen.svg`
+      return `https://img.shields.io/badge/version-${packageJson.version}-%234fb898.svg`
     }
   }
 }
