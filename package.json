@@ -14,7 +14,8 @@
   "scripts": {
     "start": "yarn install && vuepress dev docs",
     "build": "vuepress build docs",
-    "deploy": "/bin/bash ./deploy.sh"
+    "deploy": "/bin/bash ./deploy.sh",
+    "commit": "npx git-cz"
   },
   "husky": {
     "hooks": {
