@@ -35,10 +35,8 @@ module.exports = {
       ['/design-patterns/', '⛈☀️ Hi Design patterns'],
       ['/algorithm/', '⛽☀️ Hi Algorithm'],
       ['/interview/', '⛈☀️ Hi Interview'],
-      ['/source/', '⛈🐳 Hi Open Source'],
-      ['/shell/', '⛈🐳 Hi Shell'],
+      ['/source/', '⛈🐳 Hi Source'],
       ['/node/', '⛈🐳 Hi Node'],
-      ['/emojis/', '⛈☀️ Hi Emojis'],
       ['/license/', '⛈☀️ License'],
     ],
     // 显示所有页面的标题链接

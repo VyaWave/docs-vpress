@@ -6,25 +6,29 @@
   "author": "AyAmeng <372969383@qq.com>",
   "license": "MIT",
   "devDependencies": {
+    "commitizen": "^2.10.1",
+    "conventional-changelog-cli": "^2.0.1",
     "cz-conventional-changelog": "^2.1.0",
     "husky": "^1.0.0-rc.13",
     "terminalizer": "^0.2.5",
     "vuepress": "^0.12.0"
   },
   "scripts": {
-    "start": "yarn install && vuepress dev docs",
+    "start": "vuepress dev docs",
     "build": "vuepress build docs",
     "deploy": "/bin/bash ./deploy.sh",
-    "commit": "npx git-cz"
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "husky": {
     "hooks": {
-      "pre-push": "yarn deploy"
     }
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    },
+    "cz-emoji": {
+      "path":"./node_modules/cz-emoji"
     }
   }
 }

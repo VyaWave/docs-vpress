@@ -62,6 +62,8 @@ sidebarDepth: 2
 
 - [Terminalizer capture Pic For Terminal](https://github.com/faressoft/terminalizer) ⛳️🥊 `在终端进行录制生成gif图`
 
+- [zsh-autosuggestions]( https://github.com/zsh-users/zsh-autosuggestions) ⛳️🥊 `shell 自动补全`
+
 ## 4. Git
 
  1. [husky@next](https://github.com/typicode/husky) ⛳️🥊 `Git Hooks Easy`
@@ -72,12 +74,37 @@ sidebarDepth: 2
 
 - [iview weapp](https://weapp.iviewui.com/docs/guide/start) ⛳ ️🥊 `iView 的 小程序 Ui`
 
-## 5. Alfred神器
+## 6. Alfred神器
 
 - [Alfred intro](http://louiszhai.github.io/2018/05/31/alfred/) ⛳ ️🥊 `科普使用`
 
 - [Alfred Site](https://www.alfredapp.com/) ⛳ ️🥊 `workflow Website`
 
 - [Alfred Workflow](http://alfredworkflow.com/) ⛳ ️🥊 `workflow list`
+
+## 7. Misunderstanding 误区
+
+- zsh plugin 生效
+
+```sh
+# zsh plugin 需要生效 需要以下
+
+# ~/.zshrc
+plugins=(
+  git,
+  zsh-autosuggestions,
+  zsh-syntax-highlighting
+)
+
+# ~/.zshrc
+# 加载shell_alias别名文件
+test -f ~/.shell_alias && source ~/.shell_alias
+
+# 开启 zsh-autosuggestions, zsh-syntax-highlighting
+source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+```
+
 
 🚀🚀🚀
