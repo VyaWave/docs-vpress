@@ -4,6 +4,11 @@ sidebarDepth: false
 
 # 🎉Hi Coder U R Welcome
 
+---
+
+<!-- Badge Component -->
+<Badge-Comp/>
+
 ![Alt text](../assets/star.jpg)
 
 `本着扎实基础的目的和能够让各位同学一起成长`
