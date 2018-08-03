@@ -12,13 +12,12 @@
     "vuepress": "^0.12.0"
   },
   "scripts": {
-    "dev": "vuepress dev docs",
+    "start": "yarn install && vuepress dev docs",
     "build": "vuepress build docs",
     "deploy": "/bin/bash ./deploy.sh"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "",
       "pre-push": "yarn deploy"
     }
   },
