@@ -1137,6 +1137,8 @@ Hello
 
 ## 8. 浏览器 GC (垃圾回收)
 
+![Alt text](../../assets/browser/40.jpg)
+
 [原文链接 劼哥stone](https://juejin.im/post/5865061e128fe1006d13043f)
 
 >《JavaScript 闯关记》之垃圾回收和内存管理
@@ -1869,3 +1871,313 @@ document.body.classList.contains('name') // true or false
 ```
 
 ## 10. Event 事件
+
+![Alt text](../../assets/browser/42.png)
+
+JS 事件模型
+
+[原文链接](http://www.segmentfault.com)
+
+### 10.1 观察者模式
+
+观察者模式又叫做发布订阅者模式(Publish/Subscribe)，它可以让多个观察者对象同时监听某一个主题对象，这个主题对象的状态变化时会通知所有的订阅者，使得它们能够做出反应。
+JS的事件模型就是一种观察者模式的体现，当对应的事件被触发时，监听该事件的所有监听函数都会被调用。
+
+下面是用JS实现的一个观察者模式的代码:
+
+```ts
+var events = (function() {
+  var topics = {};
+
+  return {
+    publish: function(topic, info) {
+      console.log('publish a topic:' + topic);
+      if (topics.hasOwnProperty(topic)) {
+        topics[topic].forEach(function(handler) {
+          handler(info ? info : {});
+        })
+      }
+    },
+    subscribe: function(topic, handler) {
+      console.log('subscribe an topic:' + topic);
+      if (!topics.hasOwnProperty(topic)) {
+        topics[topic] = [];
+      }
+
+      topics[topic].push(handler);
+    },
+    remove: function(topic, handler) {
+      if (!topics.hasOwnProperty(topic)) {
+        return;
+      }
+
+      var handlerIndex = -1;
+      topics[topic].forEach(function(element, index) {
+        if (element === handler) {
+          handlerIndex = index;
+        }
+      });
+
+      if (handlerIndex >= 0) {
+        topics[topic].splice(handlerIndex, 1);
+      }
+    },
+    removeAll: function(topic) {
+      console.log('remove all the handler on the topic:' + topic);
+      if (topics.hasOwnProperty(topic)) {
+        topics[topic].length = 0;
+      }
+    }
+  }
+})();
+```
+
+- 使用事例:
+
+```ts
+//主题监听函数
+var handler = function(info) {
+    console.log(info);
+}
+//订阅hello主题
+events.subscribe('hello', handler);
+
+//发布hello主题
+events.publish('hello', 'hello world');
+```
+
+### 10.2 事件与事件流
+
+事件是与浏览器或文档交互的瞬间，如点击按钮，填写表格等，它是JS与HTML之间交互的桥梁。
+DOM是树形结构，如果同时给父子节点都绑定事件时，当触发子节点的时候，这两个事件的发生顺序如何决定?这就涉及到事件流的概念，它描述的是页面中接受事件的顺序。
+
+`事件流有两种:`
+
+- 事件冒泡(Event Capturing): 是一种从下往上的传播方式。事件最开始由最具体的元素(文档中嵌套层次最深的那个节点接受, 也就是DOM最低层的子节点), 然后逐渐向上传播到最不具体的那个节点，也就是DOM中最高层的父节点。
+
+- 事件捕获(Event Bubbling): 与事件冒泡相反。事件最开始由不太具体的节点最早接受事件, 而最具体的节点最后接受事件。
+
+`事件模型`
+
+### 10.3 DOM 0级模型
+
+又称为原始事件模型，在该模型中，事件不会传播，即没有事件流的概念。事件绑定监听函数比较简单, 有两种方式:
+
+HTML代码中直接绑定:
+
+通过JS代码指定属性值:
+
+```ts
+var btn = document.getElementById('.btn');
+btn.onclick = fun;
+```
+
+移除监听函数：
+
+```ts
+  btn.onclick = null;
+```
+
+这种方式所有浏览器都兼容，但是逻辑与显示并没有分离。
+
+### 10.4 IE事件模型
+
+IE事件模型共有两个过程:
+
+- 事件处理阶段(target phase)。事件到达目标元素, 触发目标元素的监听函数。
+
+- 事件冒泡阶段(bubbling phase)。事件从目标元素冒泡到document, 依次检查经过的节点是否绑定了事件监听函数，如果有则执行。
+
+事件绑定监听函数的方式如下:
+
+`attachEvent(eventType, handler)`
+
+事件移除监听函数的方式如下:
+
+`detachEvent(eventType, handler)`
+
+>参数说明:
+
+```ts
+eventType指定事件类型(注意加on)
+
+handler是事件处理函数
+```
+
+Example:
+
+```ts
+var btn = document.getElementById('.btn');
+btn.attachEvent(‘onclick’, showMessage);
+btn.detachEvent(‘onclick’, showMessage);
+```
+
+### 10.5 DOM2级模型
+
+属于W3C标准模型，现代浏览器(除IE6-8之外的浏览器)都支持该模型。在该事件模型中，一次事件共有三个过程:
+
+- 事件捕获阶段(capturing phase)。事件从document一直向下传播到目标元素, 依次检查经过的节点是否绑定了事件监听函数，如果有则执行。
+
+- 事件处理阶段(target phase)。事件到达目标元素, 触发目标元素的监听函数。
+
+- 事件冒泡阶段(bubbling phase)。事件从目标元素冒泡到document, 依次检查经过的节点是否绑定了事件监听函数，如果有则执行。
+
+事件绑定监听函数的方式如下:
+
+`addEventListener(eventType, handler, useCapture)`
+事件移除监听函数的方式如下:
+
+`removeEventListener(eventType, handler, useCapture)`
+Example:
+
+```ts
+var btn = document.getElementById('.btn');
+btn.addEventListener(‘click’, showMessage, false);
+btn.removeEventListener(‘click’, showMessage, false);
+```
+
+>参数说明:
+
+1. eventType指定事件类型(不要加on)
+
+2. handler是事件处理函数
+
+3. useCapture是一个boolean用于指定是否在捕获阶段进行处理，一般设置为false与IE浏览器保持一致。
+
+### 10.6 事件对象
+
+>当一个事件被触发时，会创建一个事件对象(Event Object), 这个对象里面包含了与该事件相关的属性或者方法。该对象会作为第一个参数传递给监听函数。
+
+- DOM事件模型中的事件对象常用属性:
+
+1. type用于获取事件类型
+
+2. target获取事件目标
+
+3. stopPropagation()阻止事件冒泡
+
+4. preventDefault()阻止事件默认行为
+
+- IE事件模型中的事件对象常用属性:
+
+1. type用于获取事件类型
+
+2. srcElement获取事件目标
+
+3. cancelBubble阻止事件冒泡
+
+4. returnValue阻止事件默认行为
+
+### 10.7 Event Wrapper
+
+由于事件模型的差异以及Event对象的不同，为了达到兼容各个浏览器的目的，我们可以增加一个Event Wrapper, 它对各个浏览器应当提供一致的事件操作接口。
+
+```ts
+var eventUtils={
+     // 添加句柄
+     addHandler:function(element,type,handler){
+       if(element.addEventListener){
+         element.addEventListener(type,handler,false);
+       }else if(element.attachEvent){
+         element.attachEvent('on'+type,handler);
+       }else{
+         element['on'+type]=handler;
+       }
+     },
+     // 删除句柄
+     removeHandler:function(element,type,handler){
+       if(element.removeEventListener){
+         element.removeEventListener(type,handler,false);
+       }else if(element.detachEvent){
+         element.detachEvent('on'+type,handler);
+       }else{
+         element['on'+type]=null;
+       }
+     },
+    //获取事件对象
+    //IE模型中event是一个全局唯一的对象绑定在window对象上
+    getEvent:function(event){
+       return event?event:window.event;
+    },
+    //获取类型
+    getType:function(event){
+     return event.type;
+    },
+    getElement:function(event){
+     return event.target || event.srcElement;
+    },
+    //阻止默认事件
+    preventDefault:function(event){
+     if(event.preventDefault){
+      event.preventDefault();
+     }else{
+      event.returnValue=false;
+     }
+    },
+    //阻止冒泡
+   stopPropagation:function(event){
+   if(event.stopPropagation){
+     event.stopPropagation();
+   }else{
+     event.cancelBubble=true;
+    }
+   }
+  }
+```
+
+### 10.8 事件代理
+
+事件在冒泡过程中会上传到父节点，因此可以把子节点的监听函数定义在父节点上，由父节点的监听函数统一处理多个子元素的事件，这种方式称为事件代理(Event delegation)。
+
+我们有一个div元素，它包含三个按钮:
+
+```html
+<button>2</button>
+<button>1</button>
+<button>0</button>
+```
+
+我们可以在父节点上一次性的为所有子节点注册监听函数:
+
+```ts
+var box = document.getElementById('box');
+
+box.addEventListener('click', function(event) {
+  if (event.target.tagName.toLowerCase() === 'input') {
+    // some code
+  }
+});
+```
+
+### 10.9 自定义事件
+
+>JS中已经内置了很多事件，如click, mouseover等等，但是内置事件毕竟有限，有时候我们想自己定义一些事件，例如三连击，threeclick。如何实现自定义事件呢？
+
+```ts
+var event = new Event('threeclick', {"bubbles":true, "cancelable":false});
+target.addEventListener('threeclick', hello, false);
+```
+
+>最后我们要在合适的时机触发该事件，我们可以使用dispatchEvent函数。该方法在当前节点触发指定事件，从而触发监听函数执行。该方法返回一个布尔值，只要有一个监听函数调用了Event.preventDefault(), 则返回false, 否则返回true。
+
+`target.dispatchEvent(event);`
+
+### 10.10 JQuery Event模型
+
+>JQuery解决的一个主要问题就是浏览器的兼容问题，它有自己的事件模型实现方式。它主要有以下特性:
+
+- 重定义了JQuery.Event对象, 统一了事件属性和方法, 统一了事件模型
+
+- 可以在一个事件类型上添加多个事件处理函数, 可以一次添加多个事件类型的事件处理函数
+
+- 支持自定义事件(事件命名空间)
+
+- 提供了toggle, hover组合事件
+
+- 提供了one, live-die, delegate-undelegate
+
+- 提供了统一的事件封装, 绑定, 执行, 销毁机制
+
+`$(document).ready();`
+
+....
