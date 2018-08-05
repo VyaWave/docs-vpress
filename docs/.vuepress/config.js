@@ -37,7 +37,7 @@ module.exports = {
       ['/interview/', '⛈☀️ Hi Interview'],
       ['/source/', '⛈🐳 Hi Source'],
       ['/node/', '⛈🐳 Hi Node'],
-      ['/changelog/', '⛈🐳 CHANGELOG'],
+      ['/changelog/', '⛈🐳 history-log'],
       ['/license/', '⛈☀️ License'],
     ],
     // 显示所有页面的标题链接
