@@ -21,6 +21,7 @@
   },
   "husky": {
     "hooks": {
+      "pre-push": "/bin/bash ./deploy.sh"
     }
   },
   "config": {
