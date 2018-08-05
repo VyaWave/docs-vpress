@@ -62,6 +62,8 @@ sidebarDepth: 2
 
 - [zsh-autosuggestions]( https://github.com/zsh-users/zsh-autosuggestions) ⛳️🥊 `shell 自动补全`
 
+- [切换源nrm](https://segmentfault.com/a/1190000000473869) ⛳️🥊 `全能的切换源`
+
 ## 4. Git
 
  1. [husky@next](https://github.com/typicode/husky) ⛳️🥊 `Git Hooks Easy`
