@@ -1,5 +1,5 @@
-<a name="0.0.1--alpha.2"></a>
-## 0.0.1--alpha.2 (2018-08-05)
+<a name="0.0.2"></a>
+## [0.0.2](https://github.com/AyAmeng/magic-wpress/compare/262bc4e...v0.0.2) (2018-08-05)
 
 
 ### Bug Fixes
