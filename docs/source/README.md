@@ -82,7 +82,7 @@ sidebarDepth: 2
 
 - [Alfred Workflow](http://alfredworkflow.com/) ⛳ ️🥊 `workflow list`
 
-## 彩蛋 见README 文件
+<!-- ## 彩蛋 见README 文件 -->
 
 <!-- zsh plugin 生效 源文件 已注释 -->
 
