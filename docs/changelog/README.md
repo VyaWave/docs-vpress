@@ -1,11 +1,12 @@
-<a name="0.0.2"></a>
-## [0.0.2](https://github.com/AyAmeng/magic-wpress/compare/262bc4e...v0.0.2) (2018-08-05)
+<a name="0.0.2--alpha.1"></a>
+## 0.0.2--alpha.1 (2018-08-06)
 
 
 ### Bug Fixes
 
 * ignore dist 去除对dist文件的追踪 ([262bc4e](https://github.com/AyAmeng/magic-wpress/commit/262bc4e))
 * spurce-page ([c79465a](https://github.com/AyAmeng/magic-wpress/commit/c79465a))
+* **badge-component:** 调整 badage 的逻辑 ([3d94ead](https://github.com/AyAmeng/magic-wpress/commit/3d94ead))
 
 
 ### Features

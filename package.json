@@ -9,6 +9,7 @@
     "commitizen": "^2.10.1",
     "conventional-changelog-cli": "^2.0.1",
     "cz-conventional-changelog": "^2.1.0",
+    "cz-emoji": "^1.1.2",
     "husky": "^1.0.0-rc.13",
     "terminalizer": "^0.2.5",
     "vuepress": "^0.12.0"
@@ -16,20 +17,18 @@
   "scripts": {
     "start": "vuepress dev docs",
     "build": "vuepress build docs",
-    "deploy": "/bin/bash ./deploy.sh",
-    "changelog": "conventional-changelog -p angular -i ./docs/changelog/README.md -s -r 0"
+    "deploy": "/bin/bash ./pre-push.sh",
+    "changelog": "conventional-changelog -p angular -i ./docs/changelog/README.md -s -r 0",
+    "version": "npm run changelog && git add -A"
   },
   "husky": {
     "hooks": {
-      "pre-push": "/bin/bash ./deploy.sh"
+      "pre-push": "sh ./pre-push.sh"
     }
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    },
-    "cz-emoji": {
-      "path": "./node_modules/cz-emoji"
+      "path": "cz-conventional-changelog"
     }
   }
 }
