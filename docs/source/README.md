@@ -72,7 +72,25 @@ sidebarDepth: 2
 
 ## 5. Wechat App
 
-- [iview weapp](https://weapp.iviewui.com/docs/guide/start) ⛳ ️🥊 `iView 的 小程序 Ui`
+`小程序的 Ui 组件 均是以小程序的自定义组件使用的, 没有很好的兼容 Mpvue`
+
+- [mpvue](http://mpvue.com/)⛳ ️🥊 `iView 的 小程序 Ui baseOn Vuejs 不兼容 mpvue 大部分兼容 vue js 语法` ⭐️ `12k`
+
+- [iview weapp](https://weapp.iviewui.com/docs/guide/start) ⛳ ️🥊 `iView 的 小程序 Ui baseOn Vuejs 不兼容 mpvue` ⭐️ `1.9k`
+
+- [zan-ui](https://youzan.github.io/zanui-weapp/#/zanui/base/icon)⛳ ️🥊 `有赞 的 小程序 Ui Base On React`
+
+- [vux](https://vux.li/)⛳ ️🥊 `有赞 的 小程序 Ui baseOn Vuejs 不兼容 mpvue` ⭐️ `13k`
+
+- [weui-wxss](https://github.com/Tencent/weui-wxss/) ⛳ ️🥊 `tencent ui 自定义 不兼容 mpvue`
+
+- [wepy](tencent.github.io/wepy) ⛳ ️🥊 `tencent ui 自定义 不兼容 mpvue 13k`
+
+- [tina](https://github.com/tinajs/tina) ⛳ ️🥊 `💃 一款轻巧的渐进式微信小程序框架 https://tina.js.org` ⭐️ `350`
+
+- [mina](https://developers.weixin.qq.com/miniprogram/dev/framework/MINA.html) ⛳ ️🥊 `💃 一款轻巧的渐进式微信小程序框架 https://tina.js.org`
+
+- [mpvue-weui](http://kuangpf.com/mpvue-weui/#/README) ⛳ ️🥊 `💃 民间制作 weui 改到 mpvue 可用的状态`
 
 ## 6. Alfred神器
 
@@ -81,6 +99,10 @@ sidebarDepth: 2
 - [Alfred Site](https://www.alfredapp.com/) ⛳ ️🥊 `workflow Website`
 
 - [Alfred Workflow](http://alfredworkflow.com/) ⛳ ️🥊 `workflow list`
+
+## 7. Gift
+
+- [apexcharts.js](https://apexcharts.com/) ⛳ ️🥊 `Clean and Modern SVG Charts`
 
 <!-- ## 彩蛋 见README 文件 -->
 
