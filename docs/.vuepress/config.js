@@ -26,7 +26,7 @@ module.exports = {
     // Side Bar Config
     sidebar: [
       '/',
-      ['/browser/', '🐿🌨 Hi Browser'],
+      ['/browser/', '🐿🌨 Hi Browsers'],
       ['/html/', '🐿🌨 Hi HTML'],
       ['/javascript/', '⛽🌨 Hi JavaScript'],
       ['/css/', '☀️🌧 Hi CSS'],
