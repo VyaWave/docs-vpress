@@ -1,6 +1,6 @@
 {
   "name": "magic-wpress",
-  "version": "0.0.2--alpha.2",
+  "version": "0.0.2--alpha.3",
   "main": "index.js",
   "repository": "https://github.com/AyAmeng/magic-wpress.git",
   "author": "AyAmeng <372969383@qq.com>",
@@ -21,7 +21,7 @@
     "build:production": "VUEPRESS_BASE=/ vuepress build docs",
     "deploy": "/bin/bash ./deploy-github.sh",
     "changelog": "conventional-changelog -p angular -i ./docs/changelog/README.md -s -r 0",
-    "version": "/bin/bash ./deploy-production.sh"
+    "version": "/bin/bash ./deploy-production.sh && git push"
   },
   "husky": {
     "hooks": {
