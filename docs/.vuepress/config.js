@@ -5,7 +5,7 @@ const webpack = require('webpack')
 module.exports = {
 
   // Basic Config
-  title: '🐯☀️前端指南',
+  title: '🐯 ☀️ 一路向北的前端指南',
 
   description: 'Just Build My FE Knowledge',
 
@@ -27,19 +27,19 @@ module.exports = {
     // Side Bar Config
     sidebar: [
       '/',
-      ['/browser/', '🐿🌨 Hi Browsers'],
-      ['/html/', '🐿🌨 Hi HTML'],
-      ['/javascript/', '⛽🌨 Hi JavaScript'],
-      ['/css/', '☀️🌧 Hi CSS'],
-      ['/function/', '🐿🌨 Hi Function'],
-      ['/object/', '☀️🌧 Hi Object'],
-      ['/design-patterns/', '⛈☀️ Hi Design patterns'],
-      ['/algorithm/', '⛽☀️ Hi Algorithm'],
-      ['/interview/', '⛈☀️ Hi Interview'],
-      ['/source/', '⛈🐳 Hi Source'],
-      ['/node/', '⛈🐳 Hi Node'],
-      ['/changelog/', '⛈🐳 history-log'],
-      ['/license/', '⛈☀️ License'],
+      ['/browser/', '🐿 Hi Browsers'],
+      ['/html/', '🌨  Hi HTML'],
+      ['/javascript/', '⛽ Hi JavaScript'],
+      ['/css/', '☀️ Hi CSS'],
+      ['/function/', '🌨 Hi Function'],
+      ['/object/', '☀️ Hi Object'],
+      ['/design-patterns/', '⛈ Hi Design patterns'],
+      ['/algorithm/', '⛽ Hi Algorithm'],
+      ['/interview/', '☀️ Hi Interview'],
+      ['/source/', '🐳 Hi Source'],
+      ['/node/', '⛈Hi Node'],
+      // ['/changelog/', '🐳 history-log'],
+      ['/about-me/', '☀️ 蜜汁彩蛋'],
     ],
     // 显示所有页面的标题链接
     displayAllHeaders: false
