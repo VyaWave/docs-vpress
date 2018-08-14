@@ -5,7 +5,6 @@ sidebarDepth: false
 # 🎉Hi Coder U R Welcome
 
 ---
-
 <!-- Badge Component -->
 <Badge-Comp/>
 

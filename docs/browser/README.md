@@ -1068,7 +1068,6 @@ w.close();
 |scroll|    拖动浏览器时|
 |load|  文档和所有图片完成加载时|
 |unload |离开当前文档时|
-|beforeunload   |和 unload 类似，但是它提供询问用户是否确认离开的机会|
 |resize|    拖动改变浏览器窗口大小时|
 |scroll |拖动浏览器时|
 
