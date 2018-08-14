@@ -1,6 +1,7 @@
 // https://vuepress.vuejs.org/zh/config/
 // https://vuepress.vuejs.org/zh/default-theme-config/
 
+const webpack = require('webpack')
 module.exports = {
 
   // Basic Config
@@ -9,7 +10,7 @@ module.exports = {
   description: 'Just Build My FE Knowledge',
 
   // # 大小写敏感
-  base: '/magic-wpress/', 
+  base: process.env.VUEPRESS_BASE || '/magic-wpress/', // don't support three just support this `value1 || value2` 
   head: [
     ['link', { rel: 'icon', href: '/star.png' }]
   ],
@@ -42,5 +43,12 @@ module.exports = {
     ],
     // 显示所有页面的标题链接
     displayAllHeaders: false
+  },
+
+  configureWebpack: (config, isServer) => {
+    if (!isServer) {
+      // 修改客户端的 webpack 配置
+    }
+    return {}
   }
 }

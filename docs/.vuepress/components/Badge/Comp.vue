@@ -17,7 +17,7 @@ export default {
   computed: {
     version() {
       // dynamic version
-      return `https://img.shields.io/badge/version-0.0.x-%234fb898.svg`
+      return `https://img.shields.io/badge/version-${packageJson.version}-%234fb898.svg`
     }
   }
 }
