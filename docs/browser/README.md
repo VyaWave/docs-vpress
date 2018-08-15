@@ -1040,7 +1040,6 @@ http://www.github.com:8080/index.html?user=li-xinyang&lang=zh-CN#home
 
 |方法      |    方法描述 |
 | :--------: | :--------:|
-| field1    |   field2 |
 | alert(), confirm() 返回真假, prompt() 返回用户输入值  | 三种对话框|
 | setTimeout(), setInterval()|  计时器|
 | open(), | close() | 开启窗口，关闭窗口|
@@ -1066,10 +1065,6 @@ w.close();
 |beforeunload|和 unload 类似，但是它提供询问用户是否确认离开的机会|
 |resize|    拖动改变浏览器窗口大小时|
 |scroll|    拖动浏览器时|
-|load|  文档和所有图片完成加载时|
-|unload |离开当前文档时|
-|resize|    拖动改变浏览器窗口大小时|
-|scroll |拖动浏览器时|
 
 ### 7.7 浏览器事件
 
