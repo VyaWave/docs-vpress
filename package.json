@@ -16,7 +16,7 @@
     "webpack": "^4.16.5"
   },
   "scripts": {
-    "start": "vuepress dev docs",
+    "dev": "vuepress dev docs",
     "build:github-pages": "VUEPRESS_BASE=/magic-wpress/ vuepress build docs",
     "build:production": "VUEPRESS_BASE=/ vuepress build docs",
     "deploy": "/bin/bash ./deploy-github.sh",
