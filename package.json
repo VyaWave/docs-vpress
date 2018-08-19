@@ -16,16 +16,18 @@
     "webpack": "^4.16.5"
   },
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build:github-pages": "VUEPRESS_BASE=/magic-wpress/ vuepress build docs",
+    "dev": "TARGET=DESIGN vuepress dev docs",
+    "build:github-pages": "VUEPRESS_BASE=/magic-wpress/ TARGET=GITHUB vuepress build docs",
     "build:production": "VUEPRESS_BASE=/ vuepress build docs",
-    "deploy": "/bin/bash ./deploy-github.sh",
+    "build:live": "VUEPRESS_BASE=/ TARGET=LIVE vuepress build docs",
+    "build:design": "VUEPRESS_BASE=/ TARGET=DESIGN vuepress build docs",
+    "deploy": "/bin/bash ./github-deploy.sh",
     "changelog": "conventional-changelog -p angular -i ./docs/changelog/README.md -s -r 0",
-    "version": "/bin/bash ./deploy-production.sh && git push"
+    "version": "/bin/bash ./design-deploy.sh && /bin/bash ./live-deploy.sh && git push"
   },
   "husky": {
     "hooks": {
-      "pre-push": "/bin/bash ./deploy-github.sh "
+      "pre-push": "/bin/bash ./github-deploy.sh "
     }
   },
   "config": {
