@@ -38,6 +38,7 @@ module.exports = {
       ['/interview/', '☀️ Hi Interview'],
       ['/source/', '🐳 Hi Source'],
       ['/node/', '⛈Hi Node'],
+      ['/nginx/', '⛽Nginx'],
       // ['/changelog/', '🐳 history-log'],
       ['/about-me/', '☀️ 蜜汁彩蛋'],
     ],
