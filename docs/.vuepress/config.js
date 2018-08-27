@@ -39,6 +39,7 @@ module.exports = {
       ['/source/', '🐳 Hi Source'],
       ['/node/', '⛈Hi Node'],
       ['/nginx/', '⛽Nginx'],
+      ['/common-sense/', '⛈ Language'],
       // ['/changelog/', '🐳 history-log'],
       ['/about-me/', '☀️ 蜜汁彩蛋'],
     ],
