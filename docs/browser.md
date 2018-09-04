@@ -15,7 +15,7 @@ sidebarDepth: 2
 
 ## 1. 浏览器种类
 
-![10](../../assets/browser/17.jpg)
+![10](../assets/browser/17.jpg)
 
 - Chrome / Chromium `WebKit`
 - firefox `Gecko`
@@ -25,7 +25,7 @@ sidebarDepth: 2
 
 ## 2. 浏览器组成
 
-![browser ](../../assets/browser/1.png)
+![browser ](../assets/browser/1.png)
 
 1. `用户界面`。包括地址栏、前进/后退按钮、书签菜单等。除了浏览器主窗口显示的您请求的页面外，其他显示的各个部分都属于用户界面。
 
@@ -46,7 +46,7 @@ IndexDb
 
 ## 3. 浏览器线程
 
-![browser ](../../assets/browser/2.png)
+![browser ](../assets/browser/2.png)
 
 ### 3.1 浏览器中的线程介绍
 
@@ -92,7 +92,7 @@ alert('end');
 
  执行的结果是弹出‘end’‘end 1’，然后浏览器假死，就是不弹出‘end 2’。也就是说第一个settimeout里执行的时候是一个死循环，这个直接导致了理论上比它晚一秒执行的第二个settimeout里的函数被阻塞，这个和我们平时所理解的异步函数多线程互不干扰是不符的。
 
-![Alt text](../../assets/browser/3.png)
+![Alt text](../assets/browser/3.png)
 
 ### 3.4 JS单线程
 
@@ -179,7 +179,7 @@ foo(100);
 ### 3.7 简述 事件循环(Event Loop)
 
 `Event Loop`
-![Alt text](../../assets/browser/5.png)
+![Alt text](../assets/browser/5.png)
 
 `主线程从执行队列不断地获取任务，这个过程是循环不断地，叫做“Event Loop”事件循环
 同步任务总是会在异步任务之前执行
@@ -238,7 +238,7 @@ console.log(b - a);
 不仅如此，我还打印了循环所用时间 
 来看看控制台
 
-![Alt text](../../assets/browser/4.png)
+![Alt text](../assets/browser/4.png)
 
 输出了10w个1，用了将近7s
 timer依然在最后打印
@@ -290,11 +290,11 @@ Ajax如果处理结束后（通过Http请求线程），也会将回调函数放
 
 ## 4. 🐯JS 事件循环详解
 
-![Important](../../assets/browser/22.jpg)
+![Important](../assets/browser/22.jpg)
 
 `大量摘抄`
 
-![Alt text](../../assets/browser/6.png)
+![Alt text](../assets/browser/6.png)
 
 ### 4.1 JS 事件循环前言
 
@@ -315,7 +315,7 @@ console.log(b);
 ```
 
 然而实际上js是这样的：
-![10](../../assets/browser/12.png)
+![10](../assets/browser/12.png)
 
 ```ts
 setTimeout(function(){
@@ -334,7 +334,7 @@ new Promise(function(resolve){
 console.log('代码执行结束');
 ```
 
-![10](../../assets/browser/13.png)
+![10](../assets/browser/13.png)
 
 依照js是`按照语句出现的顺序`执行这个理念，我自信的写下输出结果：
 
@@ -346,7 +346,7 @@ console.log('代码执行结束');
 ```
 
 去chrome上验证下，结果完全不对，瞬间懵了，说好的一行一行执行的呢？
-![10](../../assets/browser/14.png)
+![10](../assets/browser/14.png)
 
 我们真的要彻底弄明白javascript的执行机制了。
 
@@ -374,7 +374,7 @@ javascript是一门单线程语言，在最新的HTML5中提出了Web-Worker，�
 - 异步任务
 
 当我们打开网站时，网页的渲染过程就是一大堆同步任务，比如页面骨架和页面元素的渲染。而像加载图片音乐之类占用资源大耗时久的任务，就是异步任务。关于这部分有严格的文字定义，但本文的目的是用最小的学习成本彻底弄懂执行机制，所以我们用导图来说明：
-![Important](../../assets/browser/8.png)
+![Important](../assets/browser/8.png)
 
 导图要表达的内容用文字来表述的话：
 
@@ -510,14 +510,14 @@ setInterval(function () {
 
 我们每100毫秒调用一次func函数，如果func的执行时间少于100毫秒的话，在遇到下一个100毫秒前就能够执行完：
 
-![10](../../assets/browser/9.png)
+![10](../assets/browser/9.png)
 但如果func的执行时间大于100毫秒，该触发下一个func函数时之前的还没有执行完怎么办？答案如下图所示，那么第二个func会在队列（这里的队列是指event loop）中等待，直到第一个函数执行完
-![11](../../assets/browser/10.png)
+![11](../assets/browser/10.png)
 
 如果第一个函数的执行时间特别长，在执行的过程中本应触发了许多个func怎么办，那么所有这些应该触发的函数都会进入队列吗？
 
 不，只要发现队列中有一个被执行的函数存在，那么其他的统统忽略。如下图，在第300毫秒和400毫秒处的回调都被抛弃，一旦第一个函数执行完后，接着执行队列中的第二个，即使这个函数已经“过时”很久了。
-![10](../../assets/browser/11.png)
+![10](../assets/browser/11.png)
 
 
 还有一点，虽然你在setInterval的里指定的周期是100毫秒，但它并不能保证两个函数之间调用的间隔一定是一百毫秒。在上面的情况中，如果队列中的第二个函数时在第450毫秒处结束的话，在第500毫秒时，它会继续执行下一轮func，也就是说这之间的间隔只有50毫秒，而非周期100毫秒
@@ -563,7 +563,7 @@ console.log('console');
 
 事件循环，宏任务，微任务的关系如图所示：
 
-![Alt text](../../assets/browser/6.png)
+![Alt text](../assets/browser/6.png)
 
 ### 4.9 实战分析
 
@@ -686,7 +686,7 @@ setTimeout(function() {
 
 ## 5. ❤️浏览器存储
 
-![Alt text](../../assets/browser/18.jpg)
+![Alt text](../assets/browser/18.jpg)
 
 ### 5.1 Cookie
 
@@ -837,11 +837,11 @@ window.addEventListener('storage', storageChanged, false);
 
 ## 6. 浏览器从输入URL 到页面展示都发生了什么
 
-![Alt text](../../assets/browser/16.jpeg)
+![Alt text](../assets/browser/16.jpeg)
 
 ### 6.1 核心
 
-![Alt text](../../assets/browser/29.jpeg)
+![Alt text](../assets/browser/29.jpeg)
 
 >概述
 
@@ -913,12 +913,12 @@ HTTP 请求返回的 HTML 传递到浏览器后，如果有 gzip 会先解压，
 
 ## 7. BOM
 
-![Alt text](../../assets/browser/25.jpg)
+![Alt text](../assets/browser/25.jpg)
 
-![Alt text](../../assets/browser/26.png)
+![Alt text](../assets/browser/26.png)
 
 >BOM 为浏览器窗口对象的一组 API。
-![Alt text](../../assets/browser/27.png)
+![Alt text](../assets/browser/27.png)
 
 ### 7.1 `用于操作浏览器的API`
 
@@ -1091,7 +1091,7 @@ w.close();
 
 ### 7.7 浏览器事件
 
-![Alt text](../../assets/browser/24.png)
+![Alt text](../assets/browser/24.png)
 
 **专用事件：** `window对象-事件`
 
@@ -1154,7 +1154,7 @@ Hello
 
 ## 8. 浏览器 GC (垃圾回收)
 
-![Alt text](../../assets/browser/40.jpg)
+![Alt text](../assets/browser/40.jpg)
 
 [原文链接 劼哥stone](https://juejin.im/post/5865061e128fe1006d13043f)
 ::: tip NOTICE
@@ -1335,7 +1335,7 @@ David 大叔主要介绍了2个优化方案，而这也是最主要的2个优化
 
 #### 8.4.1 分代回收（Generation GC）
 
-![Alt text](../../assets/browser/30.jpg)
+![Alt text](../assets/browser/30.jpg)
 
 这个和 Java 回收策略思想是一致的。目的是通过区分`「临时」与「持久」对象`；多回收「临时对象区」（young generation），
 少回收「持久对象区」（tenured generation），减少每次需遍历的对象，从而减少每次GC的耗时。Chrome 浏览器所使用的 V8 引擎就是采用的分代回收策略。如图：
@@ -1345,7 +1345,7 @@ David 大叔主要介绍了2个优化方案，而这也是最主要的2个优化
 这个方案的思想很简单，就是「每次处理一点，下次再处理一点，如此类推」。这种方案，虽然耗时短，但中断较多，带来了上下文切换频繁的问题。
 Firefox 浏览器所使用的 JavaScript 引擎就是采用的增量回收策略。如图：
 
-![Alt text](../../assets/browser/31.jpg)
+![Alt text](../assets/browser/31.jpg)
 
 因为每种方案都其适用场景和缺点，因此在实际应用中，会根据实际情况选择方案。例如：如果大量对象都是长期「存活」，则分代处理优势也不大。
 
@@ -1360,13 +1360,13 @@ Firefox 浏览器所使用的 JavaScript 引擎就是采用的增量回收策略
 然后在 Chart View 上寻找内存急速下降的部分，查看对应的 Event Log，可以从中找到 GC 的日志。
 具体过程如下图所示：
 
-![Alt text](../../assets/browser/33.jpg)
+![Alt text](../assets/browser/33.jpg)
 
 ## 9. DOM API
 
-![Alt text](../../assets/browser/15.png)
+![Alt text](../assets/browser/15.png)
 
-![Alt text](../../assets/browser/38.png)
+![Alt text](../assets/browser/38.png)
 
 ### 9.1 DOM1
 
@@ -1890,7 +1890,7 @@ document.body.classList.contains('name') // true or false
 
 ## 10. Event 事件
 
-![Alt text](../../assets/browser/42.png)
+![Alt text](../assets/browser/42.png)
 
 JS 事件模型
 

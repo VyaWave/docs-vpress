@@ -4,7 +4,7 @@ sidebarDepth: 2
 
 # HTML
 
-![1](../../assets/html/5.jpg)
+![1](../assets/html/5.jpg)
 
 ---
 

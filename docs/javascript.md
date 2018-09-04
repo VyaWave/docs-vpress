@@ -15,15 +15,15 @@ sidebarDepth: 2
 🔕🔔🔊🗯💭🇨🇳🎍⭐️✨🌈🌚☄️💥🔥☀️🌤⛅️🌥☁️🌦🌧⛈🌩🌨❄️⛲️
 🍱🍛 -->
 
-![Important](../../assets/browser/7.png)
+![Important](../assets/browser/7.png)
 
 ## 1. JS Data Type 数据类型
 
-![Alt text](../../assets/JS/2.png)
+![Alt text](../assets/JS/2.png)
 
 ### 1.1 js 的数据类型及他们的内存图示
 
-![Alt text](../../assets/JS/1.png)
+![Alt text](../assets/JS/1.png)
 
 - `栈`：原始数据类型(`undefined、boolean、null、Number、String、symbol`等)
 - `堆`：引用类型(`数组、对象、函数`)
@@ -258,14 +258,14 @@ instanceof (A,B) = {
 
 从上面的例子中，我们发现虽然 instanceof 能够正确判断[] 是 Array 的实例对象，但不能辨别 [] 不是 Object 的实例对象，为什么呢，这还需要从 javascript 的原型链说起，我们首先来分析一下[]、Array、Object 三者之间的关系，从 instanceof 判断能够得出：[].**proto** ->Array.prototype， 而 Array.prototype.**proto**指向了 Object.prototype，Object.prototype.**proto** 指向了 null,标志着原型链的结束。（ps:关于 JS 原型链请阅读：浅谈 javascript 原型和原型链） 因此，[]、Array、Object 就形成了一条原型链：
 
-![Alt text](../../assets/JS/3.png)
+![Alt text](../assets/JS/3.png)
 
 从原型链可以看出，[]的**proto**最终指向了 Object.prototype，类似的 new Date()、new Person() 也会形成这样一条原型链，因此，我们用 instanceof 也不能完全精确的判断 object 类的具体数据类型。
 
 ## 2. JS Error System 错误系统
 
 🐯🙃🏃🎉⚠️
-![Alt text](../../assets/JS/4.png)
+![Alt text](../assets/JS/4.png)
 
 ### 2.1 ⚠️js 中包含的错误详细解释
 

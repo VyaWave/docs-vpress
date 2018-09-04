@@ -16,7 +16,7 @@ sidebarDepth: 2
 🍱🍛
 ``` -->
 
-![Alt text](../../assets/browser/41.png)
+![Alt text](../assets/browser/41.png)
 
 ## 1. Node 简述
 

@@ -4,7 +4,7 @@ sidebarDepth: 2
 
 # Nginx
 
-![1](../../assets/nginx/3.png)
+![1](../assets/nginx/3.png)
 
 ---
 
