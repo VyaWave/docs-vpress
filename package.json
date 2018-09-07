@@ -9,6 +9,7 @@
     "commitizen": "^2.10.1",
     "conventional-changelog-cli": "^2.0.1",
     "cz-conventional-changelog": "^2.1.0",
+    "cz-emoji": "^1.1.2",
     "emoji-cz": "^0.3.0",
     "eslint": "^5.5.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -37,7 +38,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/emoji-cz",
+      "path": "./node_modules/cz-emoji",
       "types": {
         "Fix": {
           "emoji": "🐝",
