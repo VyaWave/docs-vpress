@@ -38,19 +38,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-emoji",
-      "types": {
-        "Fix": {
-          "emoji": "🐝",
-          "name": "Bug",
-          "description": "Dirty bug"
-        },
-        "Chore": {
-          "emoji": "☝️",
-          "description": "Other changes that don't modify src or test files"
-        }
-      },
-      "format": "[emoji] [name]: [subject]"
+      "path": "./node_modules/cz-emoji"
     }
   }
 }
