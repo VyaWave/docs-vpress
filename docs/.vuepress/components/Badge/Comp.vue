@@ -8,13 +8,16 @@
       <a><img src="https://img.shields.io/badge/status-coding-%234fb898.svg"></a>
       <a><img :src="version"></a>
       <a><img :src="platform"></a>
+      <audio controls="false" autoplay preload loop download="false" >
+        <source :src="music">
+      </audio>
     </p>
   </div>
 </template>
 
 // Script
 <script>
-
+const music = require('../../../../assets/time-travel.mp3')
 const packageJson = require('../../../../package.json')
 const iconSvg = require('../../../../assets/icon-left-font.svg')
 const target = process.env.TARGET
@@ -22,7 +25,8 @@ const target = process.env.TARGET
 export default {
   data(){
     return {
-      iconSvg
+      iconSvg,
+      music
     }
   },
   computed: {
