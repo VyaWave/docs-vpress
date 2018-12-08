@@ -56,17 +56,17 @@ sidebarDepth: 2
 
 - [shell-主题](https://github.com/fcamblor/oh-my-zsh-agnoster-fcamblor.git) ⛳️🥊 `shell 主题`
 
-- [zs-h-autosuggestions]( https://github.com/zsh-users/zsh-autosuggestions) ⛳️🥊 `shell 自动补全`
+- [zs-h-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) ⛳️🥊 `shell 自动补全`
 
 - [Terminalizer capture Pic For Terminal](https://github.com/faressoft/terminalizer) ⛳️🥊 `在终端进行录制生成gif图`
 
-- [zsh-autosuggestions]( https://github.com/zsh-users/zsh-autosuggestions) ⛳️🥊 `shell 自动补全`
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) ⛳️🥊 `shell 自动补全`
 
-- [切换源nrm](https://segmentfault.com/a/1190000000473869) ⛳️🥊 `全能的切换源`
+- [切换源 nrm](https://segmentfault.com/a/1190000000473869) ⛳️🥊 `全能的切换源`
 
 ## 4. Git
 
- 1. [husky@next](https://github.com/typicode/husky) ⛳️🥊 `Git Hooks Easy`
+1.  [husky@next](https://github.com/typicode/husky) ⛳️🥊 `Git Hooks Easy`
 
 - [commits/commitizen](https://github.com/commitizen/cz-cli) ⛳ ️🥊 `Make Commit Message Into Graceful Standard 规范格式化的 message 信息` ⭐️ `3.7k`
 
@@ -94,7 +94,7 @@ sidebarDepth: 2
 
 - [trao](https://taro.aotu.io/) ⛳ ️🥊 `💃 京东 auto 实验室 7.5k star 类 react 语法`
 
-## 6. Alfred神器
+## 6. Alfred 神器
 
 - [Alfred intro](http://louiszhai.github.io/2018/05/31/alfred/) ⛳ ️🥊 `科普使用`
 
@@ -110,7 +110,7 @@ sidebarDepth: 2
 
 <!-- zsh plugin 生效 源文件 已注释 -->
 
-<!-- 
+<!--
 ```sh
 # zsh plugin 需要生效 需要以下
 

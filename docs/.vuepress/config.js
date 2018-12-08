@@ -3,32 +3,29 @@
 
 const webpack = require('webpack')
 module.exports = {
-
   // Basic Config
-  title: '🐯 ☀️ 一路向北的前端指南',
+  title: 'Vya 会发现更大的世界',
 
   description: 'Just Build My FE Knowledge',
 
   // # 大小写敏感
-  base: process.env.VUEPRESS_BASE || '/magic-wpress/', // don't support three just support this `value1 || value2` 
-  head: [
-    ['link', { rel: 'icon', href: '/star.png' }]
-  ],
-  
+  base: process.env.VUEPRESS_BASE || '/magic-wpress/', // don't support three just support this `value1 || value2`
+  head: [['link', { rel: 'icon', href: '/star.png' }]],
+
   // Theme Config
   themeConfig: {
-
     // Nav Bar Config
     nav: [
       { text: 'Home', link: '/' },
-      { text: '⭐️ Star Me', link: 'https://github.com/ayameng/magic-wpress' },
+      { text: '⭐️ Star Me', link: 'https://github.com/ayameng/magic-wpress' }
     ],
+    logo: '/icon.png',
 
     // Side Bar Config
     sidebar: [
       '/',
       ['/browser', '🐿 Hi Browsers'],
-      ['/template', 'Network'],
+      ['/template', '🐳 Network'],
       ['/html', '🌨  Hi HTML'],
       ['/javascript', '⛽ Hi JavaScript'],
       ['/css', '☀️ Hi CSS'],
@@ -42,7 +39,7 @@ module.exports = {
       ['/nginx', '⛽Nginx'],
       ['/common-sense', '⛈ Language'],
       // ['/changelog/', '🐳 history-log'],
-      ['/about-me', '☀️ 蜜汁彩蛋'],
+      ['/about-me', '☀️ 蜜汁彩蛋']
     ],
     // 显示所有页面的标题链接
     displayAllHeaders: false,
@@ -51,10 +48,10 @@ module.exports = {
     lastUpdated: 'Last Updated',
     serviceWorker: {
       updatePopup: true // Boolean | Object, 默认值是 undefined.
-      // 如果设置为 true, 默认的文本配置将是: 
-      // updatePopup: { 
-      //    message: "New content is available.", 
-      //    buttonText: "Refresh" 
+      // 如果设置为 true, 默认的文本配置将是:
+      // updatePopup: {
+      //    message: "New content is available.",
+      //    buttonText: "Refresh"
       // }
     },
 

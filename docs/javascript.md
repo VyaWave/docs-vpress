@@ -1,11 +1,12 @@
 ---
 sidebarDepth: 2
 ---
+
 # JavaScript
 
 ---
 
-<!-- 
+<!--
 🎟🤹‍🤹‍🎭🎬🎼🥁🎸🚗🚌🚁✈️🚀⛵️🚤🛥🛳⛴⛽️🚦🚥🚧🚏🗽🗼🏰🎠
 ⛱🏖🏝🏜🌋🏂🏋️‍🤸🏻‍🤸🏼‍⛹️‍⛹️‍🤺🏄‍🗝🛍🎁🎊🎉🎀🛍📦🎏📯📄🗞🔈📣
 ⛺️🗻🗻🏔⛰🏤🏥🌆🌁☎️🎥⏰🛢⚒⛏💎💰💡⌛️💣🔪⚙️💉🌡🛁🛀🏿🔑
@@ -31,8 +32,8 @@ sidebarDepth: 2
 ### 1.2 数据类型：原始数据类型(值)和引用类型
 
 > 原始类型和引用类型的区别：
-> 原始类型储存在`栈（Stack）`中储存变量的值 🎉存储在栈中固定值常量
-> 而引用类型在`栈中保存的是所引用内容储存在堆（Heap）中的值`。🎉存储在堆中
+> 原始类型储存在`栈（Stack）`中储存变量的值 🎉 存储在栈中固定值常量
+> 而引用类型在`栈中保存的是所引用内容储存在堆（Heap）中的值`。🎉 存储在堆中
 > 类似于`指针`的概念，`引用类型并非储存变量真实数值而是地址`，所以`对已引用类型的复制其实只是复制了相同的地址而非实际的变量值`。
 
 ### 1.3 两种类型的区别是：存储位置不同存储方式不同
@@ -167,12 +168,13 @@ sidebarDepth: 2
   // 说明function是对象
 ```
 
-### 1.8 🙃为什么 typeof null 是 object
+### 1.8 🙃 为什么 typeof null 是 object
 
 > 从逻辑角度来看，`null值表示一个空对象指针`，而这正是使用 typeof 操作符检测 null 值时会返回“object”的原因。《JavaScript 高级程序设计(第 2 版)》P22 如是说
 
-**🙃: 娘胎里带出来的.**  
- > JS 类型值是存在 32 BIT 单元里,32 位有 1-3 位表示 TYPE TAG,其它位表示真实值 而表示 object 的标记位正好是低三位都是 0 000: object. The data is a reference to an object. 而 js 里的 Null 是机器码 NULL 空指针, (0x00 is most platforms).所以空指针引用 加上 对象标记还是 0,最终体现的类型还是 object..这也就是为什么 Number(null)===0 吧...
+**🙃: 娘胎里带出来的.**
+
+> JS 类型值是存在 32 BIT 单元里,32 位有 1-3 位表示 TYPE TAG,其它位表示真实值 而表示 object 的标记位正好是低三位都是 0 000: object. The data is a reference to an object. 而 js 里的 Null 是机器码 NULL 空指针, (0x00 is most platforms).所以空指针引用 加上 对象标记还是 0,最终体现的类型还是 object..这也就是为什么 Number(null)===0 吧...
 
 1. null 不是一个空引用, 而是一个原始值, 参考 ECMAScript5.1 中文版 4.3.11 节; 它只是期望此处将引用一个对象, 注意是"期望", 参考 null
 2. typeof null 结果是 object, 这是个历史遗留 bug
@@ -281,17 +283,17 @@ instanceof (A,B) = {
 ### 2.3 以下在浏览器可抛出错误
 
 ```ts
-  throw new SyntaxError('I dont like your syntax')
+throw new SyntaxError('I dont like your syntax')
 
-  throw new TypeError('What type of variable do you take me for?')
+throw new TypeError('What type of variable do you take me for?')
 
-  throw new RangeError('Sorry, you just dont have the range')
+throw new RangeError('Sorry, you just dont have the range')
 
-  throw new EvalError('That does‘nt evaluate.')
+throw new EvalError('That does‘nt evaluate.')
 
-  throw new URIError('Uri, is that you?')
+throw new URIError('Uri, is that you?')
 
-  throw new ReferenceError('You didn’t cite your references properly')
+throw new ReferenceError('You didn’t cite your references properly')
 ```
 
 ### 2.4 错误捕捉和错误处理
@@ -301,17 +303,17 @@ instanceof (A,B) = {
   错误处理在程序设计中的重要性是一定的。任何有影响力的 Web 应用程序都需要一套完善的错误处理机制。
 
 ```ts
-  try {
-    // 可能会导致错误的代码
-  } catch (e) {
-    // 在错误发生时怎么处理
-  }
+try {
+  // 可能会导致错误的代码
+} catch (e) {
+  // 在错误发生时怎么处理
+}
 ```
 
 - window.onerror
 
 ```ts
-  window.onerror = function(message, url, line) {
+window.onerror = function(message, url, line) {
   // 处理错误
 }
 ```
@@ -509,7 +511,7 @@ var res20 = str8.substring(0,-4);//会把-4变成0 返回空字符串""; 等效�
 
 ### 4.1 🙃Question
 
-- 如何区分array?
+- 如何区分 array?
 
 ```ts
 1. instanceof 判断数组：
@@ -530,13 +532,13 @@ console.log(array instanceof Array);
 3. Object.prototype.toString.call() // [object Array]
 ```
 
-- 如何实现一个高阶函数 `reduce` 和 `map` ? ⚠️⚠️不能是箭头函数 否则this 指向window
+- 如何实现一个高阶函数 `reduce` 和 `map` ? ⚠️⚠️ 不能是箭头函数 否则 this 指向 window
 
 ```ts
 1. reduce // ⚠️ 未容错
 
 Array.prototype._reduce = function(cb, /* initValue */){
-  const arr =Object(this)		
+  const arr =Object(this)
   const length = arr.length
   const hasInit = arguments.length  > 1
   let res = hasInit ? arguments[1] : arr[0]
@@ -550,7 +552,7 @@ Array.prototype._reduce = function(cb, /* initValue */){
 
 2. map ⚠️ 引用类型元素会出现问题
 
-Array.prototype._map = function(callback, thisValue) { 
+Array.prototype._map = function(callback, thisValue) {
   console.info(arguments[1])
   const getType = (s) => {
     return Object.prototype.toString.call(this)
@@ -560,7 +562,7 @@ Array.prototype._map = function(callback, thisValue) {
   if (this === null || this === undefined || getType(this) === "[object Window]" ) {
     throw new Error('null or undefined or window is  invalid')
   }
-  
+
   if (typeof callback !== "function") {
     throw new Error('expect parameter is function, but not')
   }
@@ -588,13 +590,13 @@ Array.prototype._map = function(callback, thisValue) {
   }
 
   return targetArray
-  
+
 }
 
 
 3. filter
 
-Array.prototype._filter= function(callback, /*thisValue*/) { 
+Array.prototype._filter= function(callback, /*thisValue*/) {
 
   if (arguments.length > 1) {
     thisArg = arguments[1]
@@ -602,7 +604,7 @@ Array.prototype._filter= function(callback, /*thisValue*/) {
 
   const sourceArray = [...this] // deepClone
   const length = sourceArray.length
-  
+
   if (length === 0 ) {
     console.info('empty array')
     return []
@@ -618,11 +620,11 @@ Array.prototype._filter= function(callback, /*thisValue*/) {
   }
 
   return targetArray
-  
+
 }
 
 4. some
-Array.prototype._some= function(callback, /*thisValue*/) { 
+Array.prototype._some= function(callback, /*thisValue*/) {
 
   if (arguments.length > 1) {
     thisArg = arguments[1]
@@ -630,7 +632,7 @@ Array.prototype._some= function(callback, /*thisValue*/) {
 
   const sourceArray = [...this] // deepClone
   const length = sourceArray.length
-  
+
   if (length === 0 ) {
     console.info('empty array')
     return false
@@ -647,7 +649,7 @@ Array.prototype._some= function(callback, /*thisValue*/) {
     }
   }
   return res
-  
+
 }
 
 ```
@@ -660,7 +662,7 @@ Array.prototype._some= function(callback, /*thisValue*/) {
 (...[[1,2], 3,4, [5,6]]) // (...[[1,2], 3,4, [5,6]])
 ```
 
-### 4.3 🏃必知必会
+### 4.3 🏃 必知必会
 
 `Import`
 
@@ -682,7 +684,7 @@ deleteCount：要移除的数组元素的个数
 itemN:要添加进数组的元素，如果不指定，则splice只删除数组元素
 a =[0,1,2,3,4]
 a.splice(0,0,9) // [9, 0, 1, 2, 3, 4]
-  
+
 
 🐯3. array.reduce(callback, [initialValue])
 
@@ -708,14 +710,14 @@ callback参数：
 
 ```
 
-### 4.4 ️ 🐯改变自身的方法
+### 4.4 ️ 🐯 改变自身的方法
 
 ```ts
 1. array.pop()
 删除一个数组中的最后一个元素，并且返回这个元素
 
-2. array.push(element1, ...elementN, elementArray1) 
-添加一个或多个元素到数组的末尾，并返回数组新的长度 
+2. array.push(element1, ...elementN, elementArray1)
+添加一个或多个元素到数组的末尾，并返回数组新的长度
 
 3. array.shift()
 删除数组的第一个元素，并返回这个元素
@@ -744,7 +746,7 @@ deleteCount：要移除的数组元素的个数
 itemN:要添加进数组的元素，如果不指定，则splice只删除数组元素
 a =[0,1,2,3,4]
 a.splice(0,0,9) // [9, 0, 1, 2, 3, 4]
-  
+
 8**. array.copyWithin（target, start [, end = this.length]）【有兼容性问题】
 用于在数组内的替换操作，即替换元素和被替换元素都是数组内的元素
 参数皆为整数，允许start，end为负数（倒数第n个）
@@ -754,7 +756,7 @@ a.splice(0,0,9) // [9, 0, 1, 2, 3, 4]
 start，end允许为负值，同上
 ```
 
-### 4.5 🎉不改变自身的
+### 4.5 🎉 不改变自身的
 
 ```ts
 1. array.concat(value1, value2.....) 浅复制,引入类型干扰 将传入的数组或非数组值与原数组合并，组成一个新的数组并返回

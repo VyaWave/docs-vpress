@@ -22,7 +22,7 @@ sidebarDepth: 2
 
 ### 1. 安装编译工具及库文件
 
-`yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel pcre pcre-devel`
+`yum -y install make zlib zlib-devel gcc-c++ libtool openssl openssl-devel pcre pcre-devel`
 
 ### 2. `首先要安装 PCRE 作用是让 Nginx 支持 Rewrite 功能。`
 
@@ -45,7 +45,7 @@ sidebarDepth: 2
 [root@bogon pcre-8.35]# make && make install
 ```
 
-- 2-5. 查看pcre版本
+- 2-5. 查看 pcre 版本
 
 ```shell
 [root@bogon pcre-8.35]# pcre-config --version
@@ -77,11 +77,11 @@ sidebarDepth: 2
 
 ```
 
-- 3-5、查看nginx版本
+- 3-5、查看 nginx 版本
 
 `[root@bogon nginx-1.6.2]# /usr/local/webserver/nginx/sbin/nginx -v`
 
-到此，nginx安装完成。
+到此，nginx 安装完成。
 
 ## 2. 配置
 
@@ -89,12 +89,12 @@ sidebarDepth: 2
 
 ```ts
 
-[root@bogon conf]# /usr/sbin/groupadd www 
+[root@bogon conf]# /usr/sbin/groupadd www
 [root@bogon conf]# /usr/sbin/useradd -g www www
 
 ```
 
-2. 配置nginx.conf ，将/usr/local/webserver/nginx/conf/nginx.conf替换为以下内容
+2. 配置 nginx.conf ，将/usr/local/webserver/nginx/conf/nginx.conf 替换为以下内容
 
 ```nginx
 user root;
@@ -218,7 +218,7 @@ http {
 }
 ```
 
-3. 检查配置文件nginx.conf的正确性命令：
+3. 检查配置文件 nginx.conf 的正确性命令：
 
 `[root@bogon conf]# nginx -t`
 
@@ -241,8 +241,7 @@ service nginx stop
 
 ```
 
-
-## Error 
+## Error
 
 ```ts
 
