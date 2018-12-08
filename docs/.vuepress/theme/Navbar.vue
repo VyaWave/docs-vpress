@@ -10,10 +10,10 @@
       >{{ $siteTitle }}</span>
     </router-link>
     <div class="links">
+      <Music-Bg/>
       <AlgoliaSearchBox v-if="isAlgoliaSearch" :options="algolia"/>
       <SearchBox v-else-if="$site.themeConfig.search !== false"/>
       <NavLinks class="can-hide"/>
-      <Music-Bg/>
     </div>
   </header>
 </template>

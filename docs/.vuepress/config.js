@@ -9,8 +9,10 @@ module.exports = {
   description: 'Just Build My FE Knowledge',
 
   // # 大小写敏感
-  base: process.env.VUEPRESS_BASE || '/magic-wpress/', // don't support three just support this `value1 || value2`
+  base: process.env.VUEPRESS_BASE || '/magic-wpress/',
+  // don't support three just support this `value1 || value2`
   head: [['link', { rel: 'icon', href: '/star.png' }]],
+  plugins: ['@vuepress/back-to-top'],
 
   // Theme Config
   themeConfig: {
