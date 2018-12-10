@@ -31,12 +31,6 @@ const packageJson = require("../../../../package.json");
 const iconSvg = require("../../../../assets/icon-left-font.svg");
 const target = process.env.TARGET;
 
-console.info(
-  `https://img.shields.io/badge/vpressVer-${
-    packageJson.devDependencies.vuepress
-  }-%234fb898.svg`
-);
-
 export default {
   data() {
     return {
