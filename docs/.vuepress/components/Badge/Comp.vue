@@ -13,6 +13,9 @@
         <img src="https://img.shields.io/badge/status-coding-%234fb898.svg">
       </a>
       <a>
+        <img :src="vuepressVersion">
+      </a>
+      <a>
         <img :src="version">
       </a>
       <a>
@@ -27,6 +30,12 @@
 const packageJson = require("../../../../package.json");
 const iconSvg = require("../../../../assets/icon-left-font.svg");
 const target = process.env.TARGET;
+
+console.info(
+  `https://img.shields.io/badge/vpressVer-${
+    packageJson.devDependencies.vuepress
+  }-%234fb898.svg`
+);
 
 export default {
   data() {
@@ -43,6 +52,14 @@ export default {
     },
     platform() {
       return `https://img.shields.io/badge/platform-${target}-%234fb898.svg`;
+    },
+
+    vuepressVersion() {
+      const vuepressVer = packageJson.devDependencies.vuepress.replace(
+        /\-/g,
+        "*"
+      );
+      return `https://img.shields.io/badge/vpressVer-${vuepressVer}-%234fb898.svg`;
     }
   }
 };

@@ -13,7 +13,7 @@ function sidebarGenerate(title) {
     ['/source/', '⛈🐳 Hi Source'],
     ['/node/', '⛈🐳 Hi Node'],
     ['/changelog/', '⛈🐳 history-log'],
-    ['/license/', '⛈☀️ License'],
+    ['/license/', '⛈☀️ License']
   ]
 }
 

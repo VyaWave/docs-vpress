@@ -19,7 +19,7 @@
     "eslint-plugin-react": "^7.11.1",
     "husky": "^1.0.0-rc.13",
     "terminalizer": "^0.2.5",
-    "vuepress": "^0.12.0",
+    "vuepress": "^1.0.0-alpha.27",
     "webpack": "^4.16.5"
   },
   "scripts": {
