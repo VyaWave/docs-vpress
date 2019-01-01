@@ -1,3 +1,3 @@
 # Template.MD
-think that its real and must be
+think that is real and must be
      --from 2019.1.1
