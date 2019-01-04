@@ -12,6 +12,6 @@ yarn build:live
 cd docs/.vuepress
 
 # docs.weiya.live
-scp -r dist/* root@123.207.231.183:/var/www/magellan/magic-server/static
+scp -r dist/* root@39.106.163.208:/var/website/docs
 
 cd -

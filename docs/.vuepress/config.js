@@ -12,7 +12,13 @@ module.exports = {
   base: process.env.VUEPRESS_BASE || '/magic-wpress/',
   // don't support three just support this `value1 || value2`
   head: [['link', { rel: 'icon', href: '/star.png' }]],
-  plugins: ['@vuepress/back-to-top'],
+  plugins: [
+    '@vuepress/back-to-top',
+    '@vuepress/active-header-links',
+    '@vuepress/plugin-google-analytics'
+  ],
+
+  ga: 'UA-131721632-1',
 
   // Theme Config
   themeConfig: {

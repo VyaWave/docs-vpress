@@ -13,6 +13,6 @@ yarn build:design
 cd docs/.vuepress
 
 # docs.weiya.design
-scp -r dist/* root@123.207.231.183:/var/www/magellan/express-static/docs
+scp -r dist/* root@39.106.163.208:/var/website/docs
 
 cd -
