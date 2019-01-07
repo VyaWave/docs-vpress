@@ -57,11 +57,11 @@ export default {
     }
   },
   created() {
-    console.log(
-      "%c     ",
-      "background-image: url('http://media0.giphy.com/media/MOWPkhRAUbR7i/giphy.gif'); background-repeat: no-repeat; background-size: 250px 113px; font-size: 113px;",
-      "Relaxed Comon Boy"
-    );
+    // console.log(
+    //   "%c     ",
+    //   "background-image: url('http://media0.giphy.com/media/MOWPkhRAUbR7i/giphy.gif'); background-repeat: no-repeat; background-size: 250px 113px; font-size: 113px;",
+    //   "Relaxed Comon Boy"
+    // );
     // console.log(
     //   "%c  ",
     //   "background-image: url('http://i.imgur.com/r9nq6d2.png'); background-repeat: no-repeat; background-size: 88px 128px; font-size: 128px;",

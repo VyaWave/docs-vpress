@@ -14,7 +14,7 @@
         />
         <SidebarLink v-else :item="item"/>
       </li>
-      <li class="videoWrap" v-if="showSupriseEgg">
+      <!-- <li class="videoWrap" v-if="showSupriseEgg">
         <ClientOnly>
           <div class="tip top">Hey There is Some things Interesting!</div>
 
@@ -26,7 +26,7 @@
           ></video>
           <div class="tip bottom">Vya 会发现更大的世界</div>
         </ClientOnly>
-      </li>
+      </li>-->
     </ul>
     <slot name="bottom"/>
   </div>
