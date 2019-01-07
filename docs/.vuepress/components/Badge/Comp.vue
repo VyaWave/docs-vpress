@@ -21,11 +21,6 @@
       <a>
         <img :src="platform">
       </a>
-      <video
-        loop
-        autoplay
-        src="https://files.xiami.com/webh5/files/video/a29ccbee1e9a1624832ef6d32c80225b.quicktime"
-      ></video>
     </p>
   </div>
 </template>
@@ -67,11 +62,11 @@ export default {
       "background-image: url('http://media0.giphy.com/media/MOWPkhRAUbR7i/giphy.gif'); background-repeat: no-repeat; background-size: 250px 113px; font-size: 113px;",
       "Relaxed Comon Boy"
     );
-    console.log(
-      "%c  ",
-      "background-image: url('http://i.imgur.com/r9nq6d2.png'); background-repeat: no-repeat; background-size: 88px 128px; font-size: 128px;",
-      "Relaxed Comon Boy"
-    );
+    // console.log(
+    //   "%c  ",
+    //   "background-image: url('http://i.imgur.com/r9nq6d2.png'); background-repeat: no-repeat; background-size: 88px 128px; font-size: 128px;",
+    //   "Relaxed Comon Boy"
+    // );
   }
 };
 </script>
@@ -90,7 +85,8 @@ a:nth-child(2) {
   height: 150px;
 }
 
-.bg-music {
-  /* visibility: hidden; */
+.videoWrap video {
+  display: inline-block;
+  width: 200px;
 }
 </style>

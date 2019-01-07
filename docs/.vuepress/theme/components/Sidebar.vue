@@ -14,6 +14,17 @@
         />
         <SidebarLink v-else :item="item"/>
       </li>
+      <li class="videoWrap">
+        <div class="tip top">Hey There is Some things Interesting!</div>
+
+        <video
+          muted
+          loop
+          autoplay
+          src="https://files.xiami.com/webh5/files/video/a29ccbee1e9a1624832ef6d32c80225b.quicktime"
+        ></video>
+        <div class="tip bottom">会发现更大的视野</div>
+      </li>
     </ul>
     <slot name="bottom"/>
   </div>
@@ -79,6 +90,22 @@ function resolveOpenGroupIndex(route, items) {
 </script>
 
 <style lang="stylus">
+.videoWrap
+  margin-top: 600px;
+
+  video
+    width: 200px;
+    padding: 0.35rem 1rem 0.35rem 1.25rem;
+
+  .tip
+    text-align: center;
+
+  .top
+    margin-bottom: 600px;
+
+  .bottom
+    margin-top: 600px;
+
 .sidebar
   ul
     padding: 0;
