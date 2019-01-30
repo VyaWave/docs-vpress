@@ -21,7 +21,6 @@
     "eslint-plugin-react": "^7.11.1",
     "husky": "^1.0.0-rc.13",
     "terminalizer": "^0.2.5",
-    "vuepress": "^1.0.0-alpha.27",
     "webpack": "^4.16.5"
   },
   "scripts": {
@@ -43,5 +42,8 @@
     "commitizen": {
       "path": "./node_modules/cz-emoji"
     }
+  },
+  "dependencies": {
+    "vuepress": "^0.14.8"
   }
 }

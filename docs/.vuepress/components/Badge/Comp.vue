@@ -7,12 +7,6 @@
         <img src="https://img.shields.io/badge/make%20progress-happen-%234fb898.svg">
       </a>
       <a>
-        <img src="https://img.shields.io/badge/develop%20with-VuePreess-%234fb898.svg">
-      </a>
-      <a>
-        <img src="https://img.shields.io/badge/status-coding-%234fb898.svg">
-      </a>
-      <a>
         <img :src="vuepressVersion">
       </a>
       <a>
@@ -49,11 +43,11 @@ export default {
     },
 
     vuepressVersion() {
-      const vuepressVer = packageJson.devDependencies.vuepress.replace(
+      const vuepressVer = packageJson.dependencies.vuepress.replace(
         /\-/g,
         "*"
       );
-      return `https://img.shields.io/badge/vpressVer-${vuepressVer}-%234fb898.svg`;
+      return `https://img.shields.io/badge/vuepress-${vuepressVer}-%234fb898.svg`;
     }
   },
   created() {

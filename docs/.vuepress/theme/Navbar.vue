@@ -11,6 +11,7 @@
     </router-link>
     <div class="links">
       <Music-Bg/>
+      <Loca-emoji v-show="false"/>
       <AlgoliaSearchBox v-if="isAlgoliaSearch" :options="algolia"/>
       <SearchBox v-else-if="$site.themeConfig.search !== false"/>
       <NavLinks class="can-hide"/>

@@ -14,6 +14,17 @@
         />
         <SidebarLink v-else :item="item"/>
       </li>
+      <li class="videoWrap" v-if="showSupriseEgg">
+        <ClientOnly>
+          <video
+            muted
+            loop
+            autoplay
+            src="https://files.xiami.com/webh5/files/video/a29ccbee1e9a1624832ef6d32c80225b.quicktime"
+          ></video>
+          <div class="tip bottom">Vya 会发现更大的世界</div>
+        </ClientOnly>
+      </li>
     </ul>
     <slot name="bottom"/>
   </div>
@@ -30,7 +41,9 @@ export default {
   props: ["items"],
   data() {
     return {
-      openGroupIndex: 0
+      openGroupIndex: 0,
+      showSupriseEgg: false
+
     };
   },
   created() {
@@ -46,6 +59,17 @@ export default {
       const index = resolveOpenGroupIndex(this.$route, this.items);
       if (index > -1) {
         this.openGroupIndex = index;
+      }
+
+      if (this.$route.fullPath == "/about-me.html") {
+        this.showSupriseEgg = true;
+        console.log(
+          "%c     ",
+          "background-image: url('http://media0.giphy.com/media/MOWPkhRAUbR7i/giphy.gif'); background-repeat: no-repeat; background-size: 250px 113px; font-size: 113px;",
+          "\n🌚 Great U Find Me !!!"
+        );
+      } else {
+        this.showSupriseEgg = false;
       }
     },
     toggleGroup(index) {
@@ -73,6 +97,16 @@ function resolveOpenGroupIndex(route, items) {
 
 <style lang="stylus">
 @import './styles/config.styl';
+
+.videoWrap
+  margin-top: 600px;
+
+  video
+    width: 200px;
+    padding: 0.35rem 1rem 0.35rem 1.25rem;
+
+  .tip
+    text-align: center;
 
 .sidebar
   ul
