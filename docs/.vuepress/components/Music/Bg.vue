@@ -38,7 +38,18 @@ export default {
         this.audio = document.getElementById("bg-music");
       }
       const musicInBrowserHandler = () => {
-        this.audio.play();
+        if (this.audio && typeof this.audio.play == "function") {
+          this.audio.play().catch(err => {
+            /* eslint-disable */
+            console.log(
+              "%c     ",
+              "background-image: url('http://media0.giphy.com/media/MOWPkhRAUbR7i/giphy.gif'); background-repeat: no-repeat; background-size: 250px 113px; font-size: 113px;",
+              "Relaxed, There Is No Error, Just Need Some User Touch!",
+              err
+            );
+            /* eslint-enable */
+          });
+        }
         this.playing = true;
         document.body.removeEventListener("click", musicInBrowserHandler);
       };
