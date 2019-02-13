@@ -2,7 +2,7 @@
 sidebarDepth: 2
 ---
 
-# Hi Big World On Github
+#  Big World On Github
 
 ![Alt text](../assets/github/1.jpeg)
 

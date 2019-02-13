@@ -1,4 +1,4 @@
-# 🎉  Hi Coder U R Welcome
+# 🎉   Coder U R Welcome
 
 <p align="left">
     <a><img src="https://img.shields.io/badge/make%20progress-happen-%234fb898.svg"></a>
