@@ -789,20 +789,20 @@
     lodash.throttle "^4.1.1"
 
 "@vuepress/plugin-active-header-links@^1.0.0-alpha.0":
-  version "1.0.0-alpha.0"
-  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/@vuepress/plugin-active-header-links/-/plugin-active-header-links-1.0.0-alpha.0.tgz#aa127fb5bd5d504fb9cbd65ca5e2fa37fd1cc324"
+  version "1.0.1"
+  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/@vuepress/plugin-active-header-links/download/@vuepress/plugin-active-header-links-1.0.1.tgz#b4f75932620e3c043684c1af9dbb3d17eb76a2f4"
   dependencies:
     lodash.throttle "^4.1.1"
 
 "@vuepress/plugin-back-to-top@^1.0.0-alpha.0":
-  version "1.0.0-alpha.0"
-  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/@vuepress/plugin-back-to-top/-/plugin-back-to-top-1.0.0-alpha.0.tgz#401513b39d5dd081f49404c35ab6f51002c1cca0"
+  version "1.0.1"
+  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/@vuepress/plugin-back-to-top/download/@vuepress/plugin-back-to-top-1.0.1.tgz#ae8e3ed1da1bc8bcdb178474487a4656808108aa"
   dependencies:
     lodash.debounce "^4.0.8"
 
 "@vuepress/plugin-google-analytics@^1.0.0-alpha.0":
-  version "1.0.0-alpha.0"
-  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/@vuepress/plugin-google-analytics/-/plugin-google-analytics-1.0.0-alpha.0.tgz#97acb3a512dca9b2b6e4014fa2d58da38e2a01b9"
+  version "1.0.1"
+  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/@vuepress/plugin-google-analytics/download/@vuepress/plugin-google-analytics-1.0.1.tgz#b96e5074510d7e1d8da03a696cfac2feea5d941f"
 
 "@vuepress/plugin-last-updated@^1.0.0":
   version "1.0.0"
@@ -5357,7 +5357,7 @@ lodash.clonedeep@^4.5.0:
 
 lodash.debounce@^4.0.8:
   version "4.0.8"
-  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
+  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/lodash.debounce/download/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
 
 lodash.kebabcase@^4.1.1:
   version "4.1.1"
@@ -5390,7 +5390,7 @@ lodash.templatesettings@^4.0.0:
 
 lodash.throttle@^4.1.1:
   version "4.1.1"
-  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
+  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/lodash.throttle/download/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
 
 lodash.uniq@^4.5.0:
   version "4.5.0"
