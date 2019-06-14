@@ -9,6 +9,12 @@ sidebarDepth: false
 <!-- Badge Component -->
 <Badge-Comp/>
 
+<ClientOnly>
+  <Musics-Bg/>
+</ClientOnly>
+
+<!-- <Music-Bg/> -->
+
 ![Alt text](../assets/star.jpg)
 
 <!--

@@ -43,24 +43,21 @@ export default {
     },
 
     vuepressVersion() {
-      const vuepressVer = packageJson.dependencies.vuepress.replace(
-        /\-/g,
-        "*"
-      );
+      const vuepressVer = packageJson.dependencies.vuepress.replace(/\-/g, "*");
       return `https://img.shields.io/badge/vuepress-${vuepressVer}-%234fb898.svg`;
     }
   },
   created() {
-    // console.log(
-    //   "%c     ",
-    //   "background-image: url('http://media0.giphy.com/media/MOWPkhRAUbR7i/giphy.gif'); background-repeat: no-repeat; background-size: 250px 113px; font-size: 113px;",
-    //   "Relaxed Comon Boy"
-    // );
-    // console.log(
-    //   "%c  ",
-    //   "background-image: url('http://i.imgur.com/r9nq6d2.png'); background-repeat: no-repeat; background-size: 88px 128px; font-size: 128px;",
-    //   "Relaxed Comon Boy"
-    // );
+    console.log(
+      "%c     ",
+      "background-image: url('http://media0.giphy.com/media/MOWPkhRAUbR7i/giphy.gif'); background-repeat: no-repeat; background-size: 250px 113px; font-size: 113px;",
+      "Relaxed Comon Boy"
+    );
+    console.log(
+      "%c  ",
+      "background-image: url('http://i.imgur.com/r9nq6d2.png'); background-repeat: no-repeat; background-size: 88px 128px; font-size: 128px;",
+      "Relaxed Comon Boy"
+    );
   }
 };
 </script>

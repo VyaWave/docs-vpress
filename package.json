@@ -21,6 +21,7 @@
     "eslint-plugin-react": "^7.11.1",
     "husky": "^1.0.0-rc.13",
     "terminalizer": "^0.2.5",
+    "vue-aplayer": "^1.6.1",
     "webpack": "^4.16.5"
   },
   "scripts": {
