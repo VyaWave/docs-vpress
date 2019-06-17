@@ -1,6 +1,6 @@
 {
   "name": "magic-wpress",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "main": "index.js",
   "repository": "https://github.com/RVya/magic-wpress.git",
   "author": "RVya <372969383@qq.com>",
@@ -32,7 +32,7 @@
     "build:design": "VUEPRESS_BASE=/ TARGET=DESIGN vuepress build docs",
     "deploy": "/bin/bash ./github-deploy.sh",
     "changelog": "conventional-changelog -p angular -i ./docs/changelog.md -s -r 0",
-    "version": "/bin/bash ./design-deploy.sh && /bin/bash ./live-deploy.sh && git push"
+    "version": "/bin/bash ./design-deploy.sh && git push"
   },
   "husky": {
     "hooks": {
