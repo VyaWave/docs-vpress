@@ -1,15 +1,20 @@
 // Template
 <template>
   <span class="music-player">
-    <img :src="icon" class="playerComtrols" @click="musicHandler">
     <aplayer
-      autoplay
+      class="aplayer-wrap"
+      repeat="repeat-all"
+      :mini="true"
+      :autoplay="true"
+      :float="true"
+      :listFolded="true"
+      preload="auto"
       :music="{
         title: '花',
         artist: '谷村新司',
         src: 'https://docs.weiya.live/谷村新司-花.mp3',
         pic: 'https://docs.weiya.live/谷村新司-花.jpg'
-      }"
+        }"
       :list="[
         {
         title: '花',
@@ -23,17 +28,14 @@
         src: 'https://docs.weiya.live/time-travel.mp3',
         pic: 'https://docs.weiya.live/about-mes.jpg'
         },
-
       ]"
     />
+    <div class="music-desc">Cool MAN!</div>
   </span>
 </template>
 
 // Script
 <script>
-const playIcon = require("../../../../assets/play.svg");
-const pauseIcon = require("../../../../assets/pause.svg");
-
 // ES6
 import Aplayer from "vue-aplayer";
 
@@ -89,12 +91,19 @@ export default {
 <style scoped>
 .music-player {
   box-sizing: border-box;
-  display: inline;
   align-items: center;
   position: relative;
-  line-height: 2.2rem;
-  margin-right: 3.2rem;
+  width: 100%;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 0 1.25rem 1.25rem;
 }
+
+.aplayer-wrap {
+  display: inline-block;
+}
+
 .bg-music {
   display: none;
 }
