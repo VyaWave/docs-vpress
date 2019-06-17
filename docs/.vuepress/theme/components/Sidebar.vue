@@ -1,12 +1,12 @@
 <template>
   <aside class="sidebar">
+    <ClientOnly>
+      <Musics-Bg/>
+    </ClientOnly>
     <NavLinks/>
     <slot name="top"/>
     <SidebarLinks :depth="0" :items="items"/>
     <slot name="bottom"/>
-    <ClientOnly>
-      <Musics-Bg/>
-    </ClientOnly>
   </aside>
 </template>
 
