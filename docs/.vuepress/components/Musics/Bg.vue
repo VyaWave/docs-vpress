@@ -10,10 +10,10 @@
       :listFolded="true"
       preload="auto"
       :music="{
-        title: '花',
-        artist: '谷村新司',
-        src: 'https://docs.weiya.live/谷村新司-花.mp3',
-        pic: 'https://docs.weiya.live/谷村新司-花.jpg'
+        title: 'Travel Time',
+        artist: '岸部真明',
+        src: 'https://docs.weiya.live/time-travel.mp3',
+        pic: 'https://docs.weiya.live/about-mes.jpg'
         }"
       :list="[
         {

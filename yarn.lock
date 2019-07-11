@@ -720,17 +720,18 @@
     source-map "^0.7.3"
     vue-template-es2015-compiler "^1.6.0"
 
-"@vuepress/core@^1.0.0":
-  version "1.0.0"
-  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/@vuepress/core/download/@vuepress/core-1.0.0.tgz#6ae0d35d294b0c137ec422db09ad9d955aa25f39"
+"@vuepress/core@^1.0.2":
+  version "1.0.2"
+  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/@vuepress/core/download/@vuepress/core-1.0.2.tgz#75d0c6ccb4be92c6674c3bbfbe25639c8239921b"
+  integrity sha1-ddDGzLS+ksZnTDu/viVjnII5khs=
   dependencies:
     "@babel/core" "^7.0.0"
     "@vue/babel-preset-app" "^3.1.1"
-    "@vuepress/markdown" "^1.0.0"
-    "@vuepress/markdown-loader" "^1.0.0"
-    "@vuepress/plugin-last-updated" "^1.0.0"
-    "@vuepress/plugin-register-components" "^1.0.0"
-    "@vuepress/shared-utils" "^1.0.0"
+    "@vuepress/markdown" "^1.0.2"
+    "@vuepress/markdown-loader" "^1.0.2"
+    "@vuepress/plugin-last-updated" "^1.0.2"
+    "@vuepress/plugin-register-components" "^1.0.2"
+    "@vuepress/shared-utils" "^1.0.2"
     autoprefixer "^9.5.1"
     babel-loader "^8.0.4"
     cache-loader "^3.0.0"
@@ -762,19 +763,21 @@
     webpack-merge "^4.1.2"
     webpackbar "3.2.0"
 
-"@vuepress/markdown-loader@^1.0.0":
-  version "1.0.0"
-  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/@vuepress/markdown-loader/download/@vuepress/markdown-loader-1.0.0.tgz#1cf4dcedd36eac520e0e09d0acd165a2e7dee7dd"
+"@vuepress/markdown-loader@^1.0.2":
+  version "1.0.2"
+  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/@vuepress/markdown-loader/download/@vuepress/markdown-loader-1.0.2.tgz#b068df3049f6b63cfee329f85aed3bb0aa9e7ab0"
+  integrity sha1-sGjfMEn2tjz+4yn4Wu07sKqeerA=
   dependencies:
-    "@vuepress/markdown" "^1.0.0"
+    "@vuepress/markdown" "^1.0.2"
     loader-utils "^1.1.0"
     lru-cache "^5.1.1"
 
-"@vuepress/markdown@^1.0.0":
-  version "1.0.0"
-  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/@vuepress/markdown/download/@vuepress/markdown-1.0.0.tgz#8dfad497e96ec556aa08a7a59b6651110d45a2c9"
+"@vuepress/markdown@^1.0.2":
+  version "1.0.2"
+  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/@vuepress/markdown/download/@vuepress/markdown-1.0.2.tgz#436c5aa74e22cf7f6705b99c8892b6ba2d84cd0a"
+  integrity sha1-Q2xap04iz39nBbmciJK2ui2EzQo=
   dependencies:
-    "@vuepress/shared-utils" "^1.0.0"
+    "@vuepress/shared-utils" "^1.0.2"
     markdown-it "^8.4.1"
     markdown-it-anchor "^5.0.2"
     markdown-it-chain "^1.3.0"
@@ -782,15 +785,16 @@
     markdown-it-table-of-contents "^0.4.0"
     prismjs "^1.13.0"
 
-"@vuepress/plugin-active-header-links@^1.0.0":
-  version "1.0.0"
-  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/@vuepress/plugin-active-header-links/download/@vuepress/plugin-active-header-links-1.0.0.tgz#dd44f81f1e8de3e69656323e9196354e36a26660"
-  dependencies:
-    lodash.throttle "^4.1.1"
-
 "@vuepress/plugin-active-header-links@^1.0.0-alpha.0":
   version "1.0.1"
   resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/@vuepress/plugin-active-header-links/download/@vuepress/plugin-active-header-links-1.0.1.tgz#b4f75932620e3c043684c1af9dbb3d17eb76a2f4"
+  dependencies:
+    lodash.throttle "^4.1.1"
+
+"@vuepress/plugin-active-header-links@^1.0.2":
+  version "1.0.2"
+  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/@vuepress/plugin-active-header-links/download/@vuepress/plugin-active-header-links-1.0.2.tgz#df04f7fc21640d3e0a0b704037e360e75974d1a2"
+  integrity sha1-3wT3/CFkDT4KC3BAN+Ng51l00aI=
   dependencies:
     lodash.throttle "^4.1.1"
 
@@ -804,31 +808,36 @@
   version "1.0.1"
   resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/@vuepress/plugin-google-analytics/download/@vuepress/plugin-google-analytics-1.0.1.tgz#b96e5074510d7e1d8da03a696cfac2feea5d941f"
 
-"@vuepress/plugin-last-updated@^1.0.0":
-  version "1.0.0"
-  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/@vuepress/plugin-last-updated/download/@vuepress/plugin-last-updated-1.0.0.tgz#acfff4113240a5e1df96d60c2e80b353cc686897"
+"@vuepress/plugin-last-updated@^1.0.2":
+  version "1.0.2"
+  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/@vuepress/plugin-last-updated/download/@vuepress/plugin-last-updated-1.0.2.tgz#c839c5fb585c469a8c2ff70c16204dd72478545a"
+  integrity sha1-yDnF+1hcRpqML/cMFiBN1yR4VFo=
   dependencies:
     cross-spawn "^6.0.5"
 
-"@vuepress/plugin-nprogress@^1.0.0":
-  version "1.0.0"
-  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/@vuepress/plugin-nprogress/download/@vuepress/plugin-nprogress-1.0.0.tgz#a7777a54415cb6d6025e188c40180f8ec4e2837e"
+"@vuepress/plugin-nprogress@^1.0.2":
+  version "1.0.2"
+  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/@vuepress/plugin-nprogress/download/@vuepress/plugin-nprogress-1.0.2.tgz#3fae13c8af23292cf324d159c77e4d0ffc3133ab"
+  integrity sha1-P64TyK8jKSzzJNFZx35ND/wxM6s=
   dependencies:
     nprogress "^0.2.0"
 
-"@vuepress/plugin-register-components@^1.0.0":
-  version "1.0.0"
-  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/@vuepress/plugin-register-components/download/@vuepress/plugin-register-components-1.0.0.tgz#c619d8d98af1f6f4c2170d0e7deb0373dab6ae85"
+"@vuepress/plugin-register-components@^1.0.2":
+  version "1.0.2"
+  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/@vuepress/plugin-register-components/download/@vuepress/plugin-register-components-1.0.2.tgz#504c190b1c1836e3428d90749a2dbd59f6e596b9"
+  integrity sha1-UEwZCxwYNuNCjZB0mi29Wfbllrk=
   dependencies:
-    "@vuepress/shared-utils" "^1.0.0"
+    "@vuepress/shared-utils" "^1.0.2"
 
-"@vuepress/plugin-search@^1.0.0":
-  version "1.0.0"
-  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/@vuepress/plugin-search/download/@vuepress/plugin-search-1.0.0.tgz#56f4f441e5ad326b55b6c21c7646b197b22d68d4"
+"@vuepress/plugin-search@^1.0.2":
+  version "1.0.2"
+  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/@vuepress/plugin-search/download/@vuepress/plugin-search-1.0.2.tgz#6d43fb46b207d48b797a5bc5b01824662db4684d"
+  integrity sha1-bUP7RrIH1It5elvFsBgkZi20aE0=
 
-"@vuepress/shared-utils@^1.0.0":
-  version "1.0.0"
-  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/@vuepress/shared-utils/download/@vuepress/shared-utils-1.0.0.tgz#40995e9106055490a63e2a54d5576b4966945012"
+"@vuepress/shared-utils@^1.0.2":
+  version "1.0.2"
+  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/@vuepress/shared-utils/download/@vuepress/shared-utils-1.0.2.tgz#4e1342748b7594fe4fde9dce3bf201538fa5ca67"
+  integrity sha1-ThNCdIt1lP5P3p3OO/IBU4+lymc=
   dependencies:
     chalk "^2.3.2"
     diacritics "^1.3.0"
@@ -840,13 +849,14 @@
     semver "^6.0.0"
     upath "^1.1.0"
 
-"@vuepress/theme-default@^1.0.0":
-  version "1.0.0"
-  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/@vuepress/theme-default/download/@vuepress/theme-default-1.0.0.tgz#3910b0fb6778cc248c741731119d54ea53eaf6d1"
+"@vuepress/theme-default@^1.0.2":
+  version "1.0.2"
+  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/@vuepress/theme-default/download/@vuepress/theme-default-1.0.2.tgz#7678c4755db9d891effee838991287d31ae9c5ed"
+  integrity sha1-dnjEdV252JHv/ug4mRKH0xrpxe0=
   dependencies:
-    "@vuepress/plugin-active-header-links" "^1.0.0"
-    "@vuepress/plugin-nprogress" "^1.0.0"
-    "@vuepress/plugin-search" "^1.0.0"
+    "@vuepress/plugin-active-header-links" "^1.0.2"
+    "@vuepress/plugin-nprogress" "^1.0.2"
+    "@vuepress/plugin-search" "^1.0.2"
     docsearch.js "^2.5.2"
     stylus "^0.54.5"
     stylus-loader "^3.0.2"
@@ -8874,12 +8884,13 @@ vuepress-plugin-container@^2.0.0:
   dependencies:
     markdown-it-container "^2.0.0"
 
-vuepress@^1.0.0:
-  version "1.0.0"
-  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/vuepress/download/vuepress-1.0.0.tgz#9661318ecf62da55cda8249337d5722f912b48ec"
+vuepress@^1.0.2:
+  version "1.0.2"
+  resolved "http://artifactory.intra.xiaojukeji.com:80/artifactory/api/npm/npm/vuepress/download/vuepress-1.0.2.tgz#da62d6e43faca0b8af0bcffff6975fa27dbfdea3"
+  integrity sha1-2mLW5D+soLivC8//9pdfon2/3qM=
   dependencies:
-    "@vuepress/core" "^1.0.0"
-    "@vuepress/theme-default" "^1.0.0"
+    "@vuepress/core" "^1.0.2"
+    "@vuepress/theme-default" "^1.0.2"
     cac "^6.3.9"
     envinfo "^7.2.0"
 

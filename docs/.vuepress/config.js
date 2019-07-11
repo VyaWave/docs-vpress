@@ -22,6 +22,8 @@ module.exports = {
 
   // Theme Config
   themeConfig: {
+    extend: '@vuepress/theme-default',
+
     // Nav Bar Config
     nav: [
       { text: 'Home', link: '/' },
