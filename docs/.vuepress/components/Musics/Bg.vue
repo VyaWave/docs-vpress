@@ -12,21 +12,21 @@
       :music="{
         title: 'Travel Time',
         artist: '岸部真明',
-        src: 'https://docs.weiya.live/time-travel.mp3',
-        pic: 'https://docs.weiya.live/about-mes.jpg'
+        src: 'https://docs.weiya.design/time-travel.mp3',
+        pic: 'https://docs.weiya.design/about-mes.jpg'
         }"
       :list="[
         {
         title: '花',
         artist: '谷村新司',
-        src: 'https://docs.weiya.live/谷村新司-花.mp3',
-        pic: 'https://docs.weiya.live/谷村新司-花.jpg'
+        src: 'https://docs.weiya.design/谷村新司-花.mp3',
+        pic: 'https://docs.weiya.design/谷村新司-花.jpg'
         },
         {
         title: 'Travel Time',
         artist: '岸部真明',
-        src: 'https://docs.weiya.live/time-travel.mp3',
-        pic: 'https://docs.weiya.live/about-mes.jpg'
+        src: 'https://docs.weiya.design/time-travel.mp3',
+        pic: 'https://docs.weiya.design/about-mes.jpg'
         },
       ]"
     />
@@ -37,7 +37,7 @@
 // Script
 <script>
 // ES6
-import Aplayer from "vue-aplayer";
+import Aplayer from 'vue-aplayer'
 
 export default {
   components: {
@@ -47,44 +47,44 @@ export default {
     return {
       audio: null,
       playing: false
-    };
+    }
   },
   computed: {
     icon() {
-      return this.playing ? pauseIcon : playIcon;
+      return this.playing ? pauseIcon : playIcon
     }
   },
   methods: {
     loadMusic() {
       if (!this.audio) {
-        this.audio = document.getElementById("bg-music");
+        this.audio = document.getElementById('bg-music')
       }
       const musicInBrowserHandler = () => {
-        if (this.audio && typeof this.audio.play == "function") {
-          this.audio.play().catch(err => {});
+        if (this.audio && typeof this.audio.play == 'function') {
+          this.audio.play().catch(err => {})
         }
-        this.playing = true;
-        document.body.removeEventListener("click", musicInBrowserHandler);
-      };
-      document.body.addEventListener("click", musicInBrowserHandler);
+        this.playing = true
+        document.body.removeEventListener('click', musicInBrowserHandler)
+      }
+      document.body.addEventListener('click', musicInBrowserHandler)
     },
     musicHandler() {
       if (!this.audio) {
-        return;
+        return
       }
       if (this.playing) {
-        this.audio.pause();
-        this.playing = false;
+        this.audio.pause()
+        this.playing = false
       } else {
-        this.audio.play();
-        this.playing = true;
+        this.audio.play()
+        this.playing = true
       }
     }
   },
   mounted() {
-    this.loadMusic();
+    this.loadMusic()
   }
-};
+}
 </script>
 
 // Style
