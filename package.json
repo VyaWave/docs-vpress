@@ -45,6 +45,6 @@
     }
   },
   "dependencies": {
-    "vuepress": "^1.0.2"
+    "vuepress": "^1.7.1"
   }
 }
