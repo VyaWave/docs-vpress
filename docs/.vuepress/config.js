@@ -33,6 +33,8 @@ module.exports = {
 
     // Side Bar Config
     sidebar: [
+      ['/source', 'Source'],
+      ['/source-vue', 'Source-Vue'],
       '/',
       ['/browser', 'Browser'],
       // ['/template', 'Network'],
@@ -50,7 +52,6 @@ module.exports = {
       ['/common-sense', 'Language'],
       // ['/changelog/', 'history-log'],
       ['/webpack', 'webpack'],
-      ['/source', 'Source'],
       ['/about-me', '蜜汁彩蛋']
     ],
     // 显示所有页面的标题链接
