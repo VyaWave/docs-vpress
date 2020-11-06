@@ -35,7 +35,6 @@ module.exports = {
     sidebar: [
       ['/source', 'Source'],
       ['/source-vue', 'Source-Vue'],
-      '/',
       ['/browser', 'Browser'],
       // ['/template', 'Network'],
       ['/html', 'HTML'],
@@ -52,7 +51,9 @@ module.exports = {
       ['/common-sense', 'Language'],
       // ['/changelog/', 'history-log'],
       ['/webpack', 'webpack'],
-      ['/about-me', '蜜汁彩蛋']
+      ['/about-me', '蜜汁彩蛋'],
+      '/',
+
     ],
     // 显示所有页面的标题链接
     displayAllHeaders: false,
