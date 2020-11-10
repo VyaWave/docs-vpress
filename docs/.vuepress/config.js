@@ -34,6 +34,7 @@ module.exports = {
     // Side Bar Config
     sidebar: [
       ['/source', 'Source'],
+      ['/optimization', 'Optimization'],
       ['/source-vue', 'Source-Vue'],
       ['/browser', 'Browser'],
       // ['/template', 'Network'],
