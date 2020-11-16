@@ -28,3 +28,7 @@ sidebarDepth: 2
 ## 5. Vue-Star-Rating
 - [Vue-Star-Rating](https://github.com/craigh411/vue-star-rating)⛳️🥊 `Vue-Star-Rating`
 
+
+## 6. amis
+
+- [amis](https://github.com/Vue-Store/amis)⛳️🥊 `动态 JSON UI 配置化`
