@@ -26,11 +26,10 @@ sidebarDepth: 2
 ⛈🌩🌨❄️⛲️🏀🥊⛳️🥋🚁
 🌧💉⛹️‍🚏🎏🎥⚙️ -->
 
-## 1. React
+
+## React & Vue
 
 - [proton-native](https://proton-native.js.org/#/) ⛳️🥊 `开发桌面应用 跨平台` ⭐️ `7.7k`
-
-## 2. Vue
 
 - [vue-Press](https://vuepress.vuejs.org/zh/) ⛳️🥊 `VuePree 基于Vue 快速生成技术文档等静态站点的repo🎖🎖🎖`
 
@@ -41,8 +40,6 @@ sidebarDepth: 2
 - [iView](https://www.iviewui.com/)⛳️🥊 `iView Ui` ⭐️ `1.6k`
 
 - [iView Editor](http://editor.iviewui.com/)⛳️🥊 `iView Editor 实时进行编辑iView组件和实时预览`
-
-## 3. Shell
 
 - [Iterm](https://www.iterm2.com/) ⛳️🥊 `终端神器iterm2`
 
@@ -64,13 +61,30 @@ sidebarDepth: 2
 
 - [切换源 nrm](https://segmentfault.com/a/1190000000473869) ⛳️🥊 `全能的切换源`
 
-## 4. Git
+
+## Click Off to Close
+
+- [vue-clickaway](https://github.com/simplesmiler/vue-clickaway) ⛳️🥊 `有的时候，我们需要在用户点击元素之外的时候触发一个事件。最常见的用例是当你想通过点击关闭一个下拉框或对话框时。这是一个必不可少的包，几乎在我构建的每个应用中都会用到。🎖🎖🎖`
+
+## Toasts (Notification Bar)
+
+- [vue-toastification](https://github.com/Maronato/vue-toastification) ⛳️🥊 `首选：vue-toastification`
+##  Tables
+
+- [vue-good-table](https://github.com/xaksis/vue-good-table) ⛳️🥊 `强大的 vue- tables vue-good-table`
+
+##  Date Picker
+- [vue2-datepicker](]https://github.com/mengxiong10/vue2-datepicker) ⛳ ️🥊 `好用的 datepicker`
+##  Vue-Star-Rating
+- [Vue-Star-Rating](https://github.com/craigh411/vue-star-rating)⛳️🥊 `Vue-Star-Rating`
+
+##  Git
 
 1.  [husky@next](https://github.com/typicode/husky) ⛳️🥊 `Git Hooks Easy`
 
 - [commits/commitizen](https://github.com/commitizen/cz-cli) ⛳ ️🥊 `Make Commit Message Into Graceful Standard 规范格式化的 message 信息` ⭐️ `3.7k`
 
-## 5. Wechat App
+## Wechat App
 
 `小程序的 Ui 组件 均是以小程序的自定义组件使用的, 没有很好的兼容 Mpvue`
 
@@ -94,7 +108,7 @@ sidebarDepth: 2
 
 - [trao](https://taro.aotu.io/) ⛳ ️🥊 `💃 京东 auto 实验室 7.5k star 类 react 语法`
 
-## 6. Alfred 神器
+##  Alfred 神器
 
 - [Alfred intro](http://louiszhai.github.io/2018/05/31/alfred/) ⛳ ️🥊 `科普使用`
 
@@ -102,7 +116,7 @@ sidebarDepth: 2
 
 - [Alfred Workflow](http://alfredworkflow.com/) ⛳ ️🥊 `workflow list`
 
-## 7. Gift
+## Gift
 
 - [apexcharts.js](https://apexcharts.com/) ⛳ ️🥊 `Clean and Modern SVG Charts`
 
@@ -131,12 +145,34 @@ source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighti
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ``` -->
 
-## 8.Code specification
+## Code specification
 
 - [eslint](https://eslint.org/docs/user-guide/getting-started) ⛳ ️🥊 `Js Code Lint`
 
-## 9. extra website site
+##  extra website site
 
 - [凹凸实验室](https://aotu.io/)
 
 🚀🚀🚀
+
+
+
+
+## 轻代码 配置化生成页面
+
+- [amis](https://github.com/Vue-Store/amis)⛳️🥊 `动态 JSON UI 配置化`
+
+
+## Node
+
+- [FFCreator ](https://github.com/tnfe/FFCreator/blob/master/README.zh-CN.md)⛳️🥊 `Node 快速生成短视频`
+
+- [Vite + Vue + SSR + Cloudflare Workers ](https://github.com/frandiox/vitedge)⛳️🥊 `基于云端的 cdn 的 ssr 预渲染 框架`
+
+
+- [pinyin-pro](https://github.com/zh-lx/pinyin-pro?utm_source=gold_browser_extension) ⛳️🥊 `一款将中文汉字、词语转换为拼音的npm包。功能丰富、体积小、识别准确！ `
+
+
+## JS
+
+- [RabbitUI是一款基于Javascript的高质量开源UI组件库](https://github.com/niu-grandpa/RabbitUI) ⛳️🥊 `纯 JS UI 库`
