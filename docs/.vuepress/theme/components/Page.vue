@@ -6,7 +6,9 @@
 
     <footer class="page-edit">
       <div class="edit-link" v-if="editLink">
-        <a :href="editLink" target="_blank" rel="noopener noreferrer">{{ editLinkText }}</a>
+        <a :href="editLink" target="_blank" rel="noopener noreferrer">{{
+          editLinkText
+        }}</a>
         <OutboundLink />
       </div>
 
@@ -20,13 +22,20 @@
       <p class="inner">
         <span v-if="prev" class="prev">
           ←
-          <router-link v-if="prev" class="prev" :to="prev.path">{{ prev.title || prev.path }}</router-link>
+          <router-link v-if="prev" class="prev" :to="prev.path">{{
+            prev.title || prev.path
+          }}</router-link>
         </span>
         <span class="copyright">
-          <a target="_blank" href="http://www.beian.miit.gov.cn/">豫ICP备19002975号</a>
+          <a target="_blank" href="http://beian.miit.gov.cn/"
+            >豫ICP备19002975号</a
+          >
         </span>
         <span v-if="next" class="next">
-          <router-link v-if="next" :to="next.path">{{ next.title || next.path }}</router-link>→
+          <router-link v-if="next" :to="next.path">{{
+            next.title || next.path
+          }}</router-link
+          >→
         </span>
       </p>
     </div>
@@ -36,10 +45,10 @@
 </template>
 
 <script>
-import { resolvePage, outboundRE, endingSlashRE } from '../util'
+import { resolvePage, outboundRE, endingSlashRE } from "../util"
 
 export default {
-  props: ['sidebarItems'],
+  props: ["sidebarItems"],
 
   computed: {
     lastUpdated() {
@@ -47,13 +56,13 @@ export default {
     },
 
     lastUpdatedText() {
-      if (typeof this.$themeLocaleConfig.lastUpdated === 'string') {
+      if (typeof this.$themeLocaleConfig.lastUpdated === "string") {
         return this.$themeLocaleConfig.lastUpdated
       }
-      if (typeof this.$site.themeConfig.lastUpdated === 'string') {
+      if (typeof this.$site.themeConfig.lastUpdated === "string") {
         return this.$site.themeConfig.lastUpdated
       }
-      return 'Last Updated'
+      return "Last Updated"
     },
 
     prev() {
@@ -85,9 +94,9 @@ export default {
       const {
         repo,
         editLinks,
-        docsDir = '',
-        docsBranch = 'master',
-        docsRepo = repo
+        docsDir = "",
+        docsBranch = "master",
+        docsRepo = repo,
       } = this.$site.themeConfig
 
       if (docsRepo && editLinks && this.$page.relativePath) {
@@ -96,7 +105,7 @@ export default {
           docsRepo,
           docsDir,
           docsBranch,
-          this.$page.relativePath
+          this.$page.relativePath,
         )
       }
     },
@@ -107,7 +116,7 @@ export default {
         this.$site.themeConfig.editLinkText ||
         `Edit this page`
       )
-    }
+    },
   },
 
   methods: {
@@ -116,10 +125,10 @@ export default {
       if (bitbucket.test(repo)) {
         const base = outboundRE.test(docsRepo) ? docsRepo : repo
         return (
-          base.replace(endingSlashRE, '') +
+          base.replace(endingSlashRE, "") +
           `/src` +
           `/${docsBranch}/` +
-          (docsDir ? docsDir.replace(endingSlashRE, '') + '/' : '') +
+          (docsDir ? docsDir.replace(endingSlashRE, "") + "/" : "") +
           path +
           `?mode=edit&spa=0&at=${docsBranch}&fileviewer=file-view-default`
         )
@@ -129,14 +138,14 @@ export default {
         ? docsRepo
         : `https://github.com/${docsRepo}`
       return (
-        base.replace(endingSlashRE, '') +
+        base.replace(endingSlashRE, "") +
         `/edit` +
         `/${docsBranch}/` +
-        (docsDir ? docsDir.replace(endingSlashRE, '') + '/' : '') +
+        (docsDir ? docsDir.replace(endingSlashRE, "") + "/" : "") +
         path
       )
-    }
-  }
+    },
+  },
 }
 
 function resolvePrev(page, items) {
@@ -152,7 +161,7 @@ function find(page, items, offset) {
   flatten(items, res)
   for (let i = 0; i < res.length; i++) {
     const cur = res[i]
-    if (cur.type === 'page' && cur.path === decodeURIComponent(page.path)) {
+    if (cur.type === "page" && cur.path === decodeURIComponent(page.path)) {
       return res[i + offset]
     }
   }
@@ -160,7 +169,7 @@ function find(page, items, offset) {
 
 function flatten(items, res) {
   for (let i = 0, l = items.length; i < l; i++) {
-    if (items[i].type === 'group') {
+    if (items[i].type === "group") {
       flatten(items[i].children || [], res)
     } else {
       res.push(items[i])
