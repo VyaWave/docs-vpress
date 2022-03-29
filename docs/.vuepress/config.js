@@ -1,7 +1,7 @@
 // https://vuepress.vuejs.org/zh/config/
 // https://vuepress.vuejs.org/zh/default-theme-config/
 
-const webpack = require("webpack");
+const webpack = require("webpack")
 module.exports = {
   // Basic Config
   title: "Vya 会发现更大的世界",
@@ -17,6 +17,8 @@ module.exports = {
     "@vuepress/active-header-links",
     "@vuepress/plugin-google-analytics",
   ],
+
+  dest: "deploy",
 
   ga: "UA-131721632-1",
 
@@ -98,7 +100,7 @@ module.exports = {
           "process.env.TARGET": JSON.stringify(process.env.TARGET),
         }),
       ],
-    };
+    }
   },
 
   evergreen: true,
@@ -110,10 +112,10 @@ module.exports = {
     toc: { includeLevel: [1, 2] },
     config: (md) => {
       // 使用更多的 markdown-it 插件!
-      md.use(require("markdown-it"));
+      md.use(require("markdown-it"))
     },
   },
 
   // Only Https
   // serviceWorker: true
-};
+}
